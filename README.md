@@ -51,6 +51,13 @@ Dans ce TD1, vous commencez à coder en JavaScript, sans cours préalable. Pas d
 L’attribut _onclick_ des balises `<a>` a pour valeur une chaîne   de caractères qui évoque l’exécution d’une fonction **adapter_galerie** avec un paramètre propre à chaque balise `<a>`.
 Cet attribut _onclick_ permet un appel à un script JavaScript quand le lien est cliqué.
 
-7. Juste avant la balise `</body>`, ajoutez le code suivant, et vérifiez que l’erreur précédente ne se produit plus. ![](ressources/img2.jpg)
+7. Juste avant la balise `</body>`, ajoutez le code suivant, et vérifiez que l’erreur précédente ne se produit plus.
+
+
+    <script type="text/javascript">
+        function adapter_galerie(nom) {
+            // à compléter
+        }
+    </script>
 
 
