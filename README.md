@@ -129,8 +129,7 @@ L’idée est de créer différents effets de succession d’images.
     - retirer la classe `visible` à l’image `im`
     - ajouter la classe `cachee` à l’image `im`
 
-  Aide :
-
+   Aide :
     - `im.classList` désigne la liste de classes attribuées à `im`
     - `im.classList.add('nom_cl')` ajoute la classe `nom_cl` à `im` 
     - `im.classList.remove('nom_cl')` la lui retire
