@@ -5,7 +5,7 @@
 ## TD1
 #### _Thème : dynamiser une page web_
 
-Cliquez sur le lien ci-dessous pour faire votre fork privé du TP (**attention, pas de fork à la main !**):
+Cliquez sur le lien ci-dessous pour faire, dans un dossier public_html/JS/TD1, votre fork privé du TP (**attention, pas de fork à la main !**):
 
 https://classroom.github.com/a/_nx8U2hg
 
@@ -21,4 +21,14 @@ JavaScript permet de rendre dynamique une page web par l’utilisation de script
 
 Dans certains cas, il peut être excessif de faire des appels permanents au serveur. Dans ce TD1 vous allez devoir modifier une page web qui pour le moment est en partie remplie via PHP, par des appels exagérés au serveur web.
 
+Créez dans votre public_html un dossier JS/TD1 et importez-y la structure du fichier td1-dynamiser_une_page_web.zip de moodle.
+
 Dans ce TD1, vous commencez à coder en JavaScript, sans cours préalable. Pas d’inquiétude, vous avez déjà un passé de prog objet, et même s’il faut se méfier de pas mal de choses intuitives avec ce langage, cela ne vous empêchera pas de faire vos premiers pas en JavaScript !
+
+## EXERCICE 1
+
+1. Rappelez dans un schéma concis le mécanisme client-serveur qui permet de servir les pages web suite à une requête http. Dans quel contexte avez-vous utilisé ce mécanisme en S3 ?
+
+2. Appelez la page index.php?fleur=rose. Expliquez le rôle de chaque instruction PHP de cette page (lignes 1 à 12, lignes 26 et 30).
+
+3. En cliquant sur un des 4 items du menu, on fait une requête http au serveur, en lui passant en GET une valeur de fleur. Expliquez ce qui est actualisé sur la page quand on clique sur un item du menu. Vous pouvez le voir en affichant le code source de la page, et en cliquant sur les liens du menu dans le code source. 
