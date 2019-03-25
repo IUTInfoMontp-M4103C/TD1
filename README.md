@@ -45,6 +45,14 @@ Dans ce TD1, vous commencez à coder en JavaScript, sans cours préalable. Pas d
 
 5. Modifiez les balises `<a>` du menu pour les transformer ainsi :
 
-![](ressources/img1.jpg)
+  ![](ressources/img1.jpg)
+
+  Ouvrez l’examinateur d’élément, menu « console » (F12), rafraîchissez la page, cliquez sur un item du menu et expliquez le message d’erreur qui apparaît.
+
+  L’attribut _onclick_ des balises `<a>` a pour valeur une chaîne   de caractères qui évoque l’exécution d’une fonction **adapter_galerie** avec un paramètre propre à chaque balise `<a>`.
+
+  Cet attribut _onclick_ permet un appel à un script JavaScript quand le lien est cliqué.
+
+6. Juste avant la balise `</body>`, ajoutez le code suivant, et vérifiez que l’erreur précédente ne se produit plus.
 
 
