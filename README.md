@@ -21,7 +21,7 @@ JavaScript permet de rendre dynamique une page web par l’utilisation de script
 
 Dans certains cas, il peut être excessif de faire des appels permanents au serveur. Dans ce TD1 vous allez devoir modifier une page web qui pour le moment est en partie remplie via PHP, par des appels exagérés au serveur web.
 
-Créez dans votre public_html un dossier JS/TD1 et importez-y la structure du fichier td1-dynamiser_une_page_web.zip de moodle.
+Créez dans votre public_html un dossier JS/TD1. C'est ce dossier qui accueillera le dépôt local en lien avec votre fork du TD1.
 
 Dans ce TD1, vous commencez à coder en JavaScript, sans cours préalable. Pas d’inquiétude, vous avez déjà un passé de prog objet, et même s’il faut se méfier de pas mal de choses intuitives avec ce langage, cela ne vous empêchera pas de faire vos premiers pas en JavaScript !
 
@@ -29,15 +29,15 @@ Dans ce TD1, vous commencez à coder en JavaScript, sans cours préalable. Pas d
 
 1. Rappelez dans un schéma concis le mécanisme client-serveur qui permet de servir les pages web suite à une requête http. Dans quel contexte avez-vous utilisé ce mécanisme en S3 ?
 
-2. Appelez la page _index.php?fleur=rose_ et expliquez le rôle de chaque instruction PHP de cette page (lignes 1 à 12, lignes 26 et 30).
+2. Appelez la page **index.php?fleur=rose** et expliquez le rôle de chaque instruction PHP de cette page (lignes 1 à 12, lignes 26 et 30).
 
 3. En cliquant sur un des 4 items du menu, on fait une requête http au serveur, en lui passant en GET une valeur de fleur. Expliquez ce qui est actualisé sur la page quand on clique sur un item du menu. Vous pouvez le voir en affichant le code source de la page, et en cliquant sur les liens du menu dans le code source. 
 
 ## EXERCICE 2 - dynamiser le menu
 
-1. Excluez tous les appels au serveur dans les liens du menu en remplaçant les _href="index.php?fleur=…"_ par des _href="#"_. Vérifiez que le menu n’agit plus (ne lance plus de requête http).
+1. Excluez tous les appels au serveur dans les liens du menu en remplaçant les `href="index.php?fleur=…"` par des `href="#"`. Vérifiez que le menu n’agit plus (ne lance plus de requête http).
 
-2. Excluez de la partie PHP initiale (lignes 1 à 12) les lignes qui affectent une valeur à la variable _$fleur_.
+2. Excluez de la partie PHP initiale (lignes 1 à 12) les lignes qui affectent une valeur à la variable `$fleur`.
 
 3. Réactualisez la page web. Cliquez sur le menu. Expliquez ce que vous constatez.
 
@@ -56,8 +56,8 @@ Dans ce TD1, vous commencez à coder en JavaScript, sans cours préalable. Pas d
         </nav>
 
 6. Ouvrez l’examinateur d’élément, menu « console » (F12), rafraîchissez la page, cliquez sur un item du menu et expliquez le message d’erreur qui apparaît.
-L’attribut _onclick_ des balises `<a>` a pour valeur une chaîne   de caractères qui évoque l’exécution d’une fonction **adapter_galerie** avec un paramètre propre à chaque balise `<a>`.
-Cet attribut _onclick_ permet un appel à un script JavaScript quand le lien est cliqué.
+L’attribut `onclick` des balises `<a>` a pour valeur une chaîne   de caractères qui évoque l’exécution d’une fonction `adapter_galerie` avec un paramètre propre à chaque balise `<a>`.
+Cet attribut `onclick` permet un appel à un script JavaScript quand le lien est cliqué.
 
 7. Juste avant la balise `</body>`, ajoutez le code suivant, et vérifiez que l’erreur précédente ne se produit plus.
 
@@ -93,10 +93,10 @@ Cet attribut _onclick_ permet un appel à un script JavaScript quand le lien est
 
    Que fait `image.src = …` ?
 
-   Copiez le nouveau code de adapter_galerie, puis vérifiez vos  réponses par l’inspecteur d’éléments après les clics sur les  items du menu.
+   Copiez le nouveau code de `adapter_galerie`, puis vérifiez vos  réponses par l’inspecteur d’éléments après les clics sur les  items du menu.
 
-10. Au survol d’une image de fleur, un titre s’affiche, car l’attribut *title* a été renseigné. Mais si on passe des roses à une autre catégorie de fleurs, on voit que le script n’a pas actualisé ce *title*. Corrigez le script en complétant la fonction **adapter_galerie** (inspirez-vous de la commande `image.src = …`) et vérifiez que le title est devenu dynamique.
+10. Au survol d’une image de fleur, un titre s’affiche, car l’attribut `title` a été renseigné. Mais si on passe des roses à une autre catégorie de fleurs, on voit que le script n’a pas actualisé ce `title`. Corrigez le script en complétant la fonction `adapter_galerie` (inspirez-vous de la commande `image.src = …`) et vérifiez que le title est devenu dynamique.
 
-11. Si une image n’est pas trouvée par le serveur, l’attribut *alt* joue son rôle et affiche un texte de remplacement à l’image. Vérifiez ce rôle en changeant le nom de fichiers images (par exemple renommez les images rose1.jpg, hortensia1.jpg, fruitier1.jpg et autre1.jpg) et réactualisez la page. 
+11. Si une image n’est pas trouvée par le serveur, l’attribut `alt` joue son rôle et affiche un texte de remplacement à l’image. Vérifiez ce rôle en changeant le nom de certains fichiers images (par exemple renommez l'image' `rose1.jpg` en `roseUn.jpg`) et réactualisez la page. 
 
     Observez ce qui se passe quand on choisit les différents items du menu. Corrigez le script pour éviter le problème constaté, et pour que les attributs alt soient construits comme ceux des roses. Vérifiez le bon fonctionnement du script puis redonnez leur nom d’origine aux images modifiées.
