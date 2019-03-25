@@ -171,7 +171,7 @@ L’idée est de créer différents effets de succession d’images.
 
 5. Pour que la banière soit mise à jour automatiquement et à intervalles réguliers, et non pas à la main comme à la question précédente, ajoutez en fin de script (hors des fonctions) l’instruction 
 
-   `var chb = setInterval(change_baniere_v1,6000);`
+   `let chb = setInterval(change_baniere_v1,6000);`
 
    Ceci permet de créer une variable `chb` de type **timer**. Réactualisez la page. L’instruction précédente lance en boucle la fonction `change_baniere_v1` à intervalles réguliers de 6000 ms.
 
@@ -193,3 +193,26 @@ L’idée est de créer différents effets de succession d’images.
    Cette instruction JavaScript agit sur le css en écrivant un style « inline » pour la balise, comme vous pouvez le constater par l’inspecteur d’objets.
 
    Créez une fonction `change_baniere_v2` (sur la même base que `change_baniere_v1`) qui réalisera cette nouvelle transition, et que vous utiliserez à la place de `change_baniere_v1` dans le `setInterval`.
+
+
+## EXERCICE 4 - dynamiser le titre de la galerie
+
+On peut aussi dynamiser le titre « Galerie de fleurs ». Ainsi, quand on cliquera sur l’item **hortensia** du menu, le titre sera mis à jour en « **Galerie d’hortensias** » et de même pour les autres items.
+
+1. Au même niveau que la variable `chb` (c’est-à-dire avec un statut de variable globale), créez un tableau nommé `tabTitres` de la façon suivante :
+
+
+        let tabTitres = new Array();
+        tabTitres['rose'] = 'Galerie de roses';
+        tabTitres['hortensia'] = 'Galerie d\’hortensias';
+        tabTitres['fruitier'] = 'Galerie de fruitiers';
+        tabTitres['autre'] = 'Galerie de fleurs diverses';
+
+
+2. Créez une fonction `adapter_titre(nom)` qui modifie le contenu de la balise `<span>`. Cette fonction utilisera le tableau `tabTitres`. L’appel de cette fonction sera inséré dans la fonction `adapter_galerie`.
+
+   Indications : on peut modifier le contenu d’une balise comme `<span>` en changeant la valeur de son attribut `innerHTML` :
+
+        monParagraphe.innerHTML = 'Hello world !';
+
+
