@@ -73,7 +73,6 @@ Cet attribut _onclick_ permet un appel à un script JavaScript quand le lien est
 
         console.log("bonjour de la part du menu !");
 
-
         console.log(nom);
 
 
@@ -84,16 +83,16 @@ Cet attribut _onclick_ permet un appel à un script JavaScript quand le lien est
           function adapter_galerie(nom) {
             for(var i = 1; i <= 6; i++) {
               var image = document.getElementById('fleur' + i);
-              image.src = 'img/fleurs/' + nom + '/' + nom + '\_' + i + '.jpg';
+              image.src = 'img/fleurs/' + nom + '/' + nom + i + '.jpg';
             }
           }
         </script>
 
 
-  Que renvoie `document.getElementById('fleur' + i)` ?
+   Que renvoie `document.getElementById('fleur' + i)` ?
 
-  Que fait `image.src = …` ?
+   Que fait `image.src = …` ?
 
-  Copiez le nouveau code de adapter_galerie, puis vérifiez vos  réponses par l’inspecteur d’éléments après les clics sur les  items du menu.
+   Copiez le nouveau code de adapter_galerie, puis vérifiez vos  réponses par l’inspecteur d’éléments après les clics sur les  items du menu.
 
 
