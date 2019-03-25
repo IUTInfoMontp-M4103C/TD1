@@ -25,10 +25,31 @@ Créez dans votre public_html un dossier JS/TD1 et importez-y la structure du fi
 
 Dans ce TD1, vous commencez à coder en JavaScript, sans cours préalable. Pas d’inquiétude, vous avez déjà un passé de prog objet, et même s’il faut se méfier de pas mal de choses intuitives avec ce langage, cela ne vous empêchera pas de faire vos premiers pas en JavaScript !
 
-## EXERCICE 1
+## EXERCICE 1 - mécanisme client serveur
 
 1. Rappelez dans un schéma concis le mécanisme client-serveur qui permet de servir les pages web suite à une requête http. Dans quel contexte avez-vous utilisé ce mécanisme en S3 ?
 
-2. Appelez la page index.php?fleur=rose. Expliquez le rôle de chaque instruction PHP de cette page (lignes 1 à 12, lignes 26 et 30).
+2. Appelez la page _index.php?fleur=rose_ et expliquez le rôle de chaque instruction PHP de cette page (lignes 1 à 12, lignes 26 et 30).
 
 3. En cliquant sur un des 4 items du menu, on fait une requête http au serveur, en lui passant en GET une valeur de fleur. Expliquez ce qui est actualisé sur la page quand on clique sur un item du menu. Vous pouvez le voir en affichant le code source de la page, et en cliquant sur les liens du menu dans le code source. 
+
+## EXERCICE 2 - dynamiser le menu
+
+1. Excluez tous les appels au serveur dans les liens du menu en remplaçant les _href="index.php?fleur=…"_ par des _href="#"_. Vérifiez que le menu n’agit plus (ne lance plus de requête http).
+
+2. Excluez de la partie PHP initiale (lignes 1 à 12) les lignes qui affectent une valeur à la variable _$fleur_.
+
+3. Réactualisez la page web. Cliquez sur le menu. Expliquez ce que vous constatez.
+
+4. Pour corriger l’erreur, modifiez le contenu de la balise html _<div class='galerie'>_ pour que par défaut elle affiche les roses, en remplaçant les évocations au PHP par ce qu’il faut.
+
+5. Modifiez les balises _<a>_ du menu pour les transformer ainsi :
+
+    <nav>
+      <ul>
+        <li><a href="#" onclick="adapter_galerie('rose');">rose</a></li>
+        <li><a href="#" onclick="adapter_galerie('hortensia');">hortensia</a></li>
+        <li><a href="#" onclick="adapter_galerie('fruitier');">fruitier</a></li>
+        <li><a href="#" onclick="adapter_galerie('autre');">autre</a></li>
+      </ul>
+    </nav>
