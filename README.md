@@ -162,7 +162,7 @@ L’idée est de créer différents effets de succession d’images.
    Une fois que c’est fait, testez dans la console votre fonction en lançant l’instruction `change_baniere_v1();` (sans oublier les parenthèses).
 
 
-   **ATTENTION** : JavaScript peut avoir un comportement surprenant. Par exemple, l’opération "3" + 1 donne "31".  Ne soyez donc pas étonné si suivant("3") retourne "31". Par contre, 3 + 1 donne bien 4. Il peut donc être utile de transformer une chaîne de caractères (l’identifiant de la banière) en nombre. Pour cela, une multiplication par 1 fera l’affaire. Par exemple, `"3"*1 + 1` donne `4` car `"3"*1 est interprété en 3*1`.
+   **ATTENTION : JavaScript peut avoir un comportement surprenant. Par exemple, l’opération "3" + 1 donne "31".  Ne soyez donc pas étonné si suivant("3") retourne "31". Par contre, 3 + 1 donne bien 4. Il peut donc être utile de transformer une chaîne de caractères (l’identifiant de la banière) en nombre. Pour cela, une multiplication par 1 fera l’affaire. Par exemple, `"3"*1 + 1` donne `4` car `"3"*1 est interprété en 3*1`.**
 
 
 
@@ -170,22 +170,23 @@ L’idée est de créer différents effets de succession d’images.
 
   var chb = setInterval(change_baniere_v1,6000);
 
-Ceci permet de créer une variable chb de type « timer ». Réactualisez la page. L’instruction précédente lance en boucle la fonction change_baniere_v1 à intervalles réguliers de 6000 ms.
+   Ceci permet de créer une variable `chb` de type **timer**. Réactualisez la page. L’instruction précédente lance en boucle la fonction `change_baniere_v1` à intervalles réguliers de 6000 ms.
 
-6. Récupérez l’ensemble de votre script, qui commence à être imposant, sauvegardez-le dans un fichier scripts_td1.js du répertoire public_html/JS/TD1/js et incorporez dans le html, à la place du script déplacé, la balise suivante, qui permet d’insérer l’ensemble du script :
-
-<script type="text/javascript" src="js/scripts_td1.js"></script>
+6. Récupérez l’ensemble de votre script, qui commence à être imposant, sauvegardez-le dans un fichier `scripts_td1.js` du répertoire `public_html/JS/TD1/js` et incorporez dans le html, à la place du script déplacé, la balise suivante, qui permet d’insérer l’ensemble du script :
 
 
-Enlevez aussi l’instruction PHP qui annonce l’appel au serveur. Vous avez compris qu’il n’y avait qu’un seul appel maintenant, et que tout est dynamisé côté client.
+        <script type="text/javascript" src="js/scripts_td1.js"></script>
 
-Remarque importante : le chargement du script est bloquant pour le chargement des balises html. Il est donc important que les éléments html soient chargés avant que le script n’agisse. C’est pourquoi ce script est inséré juste avant la balise </body>.
+
+   Enlevez aussi l’instruction PHP qui annonce l’appel au serveur. Vous avez compris qu’il n’y avait qu’un seul appel maintenant, et que tout est dynamisé côté client.
+
+   Remarque importante : le chargement du script est bloquant pour le chargement des balises html. Il est donc important que les éléments html soient chargés avant que le script n’agisse. C’est pourquoi ce script est inséré juste avant la balise `</body>`.
 
 
 7. On va maintenant programmer une transition plus douce entre les différentes images de la banière. Pour cela, c’est très simple : il suffit d’ajouter une transition sur l’opacité quand on passe de la classe cachee à la classe visible et aussi de la classe visible à la classe cachee. Cela se fait par des instructions comme :
 
-  maBaniere.style.transition = "opacity 3s";
+   `maBaniere.style.transition = "opacity 3s";`
 
-Cette instruction JavaScript agit sur le css en écrivant  un style « inline » pour la balise, comme vous pouvez le constater par l’inspecteur d’objets.
+   Cette instruction JavaScript agit sur le css en écrivant un style « inline » pour la balise, comme vous pouvez le constater par l’inspecteur d’objets.
 
-Créez une fonction change_baniere_v2 (sur la même base que change_baniere_v1) qui réalisera cette nouvelle transition, et que vous utiliserez à la place de change_baniere_v1 dans le setInterval.
+   Créez une fonction `change_baniere_v2` (sur la même base que `change_baniere_v1`) qui réalisera cette nouvelle transition, et que vous utiliserez à la place de `change_baniere_v1` dans le `setInterval`.
