@@ -45,15 +45,13 @@ Dans ce TD1, vous commencez à coder en JavaScript, sans cours préalable. Pas d
 
 5. Modifiez les balises `<a>` du menu pour les transformer ainsi :
 
-`<pre>
-  <nav>
+`<nav>
     <ul>
       <li><a href="#" onclick="adapter_galerie('rose');">rose</a></li>
       <li><a href="#" onclick="adapter_galerie('hortensia');">hortensia</a></li>
       <li><a href="#" onclick="adapter_galerie('fruitier');">fruitier</a></li>
       <li><a href="#" onclick="adapter_galerie('autre');">autre</a></li>
     </ul>
-  </nav>
-</pre>`
+  </nav>`
 
 
