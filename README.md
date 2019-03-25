@@ -222,4 +222,44 @@ On peut aussi dynamiser le titre « Galerie de fleurs ». Ainsi, quand on cliq
 
 2. Comme `chb` est une variable « globale », on peut l’évoquer dans le corps d’une fonction. Créez une fonction `stopper_defilement` qui annulera le défilement de la banière, et programmez le lancement de cette fonction au clic sur la banière (attribut `onclick`). Vous pourrez vous inspirer des attributs `onclick` des items du menu.
 
-3. Créez une fonction `lancer_defilement` qui attribue à la variable `chb` la valeur `setInterval(change_baniere_v2,6000)`. Programmer la réactivation du défilement de la banière quand on double-clique dessus (associé à l’attribut `ondblclick`).
+3. Créez une fonction `lancer_defilement` qui attribue à `chb` la valeur `setInterval(change_baniere_v2,6000)`. Programmer la réactivation du défilement de la banière quand on double-clique dessus (associé à l’attribut `ondblclick`).
+
+
+## EXERCICE 6 - création d'une info-bulle
+
+L’idée est de créer une info-bulle toute simple qui apparaît au survol du **footer** et disparaît après ce survol.
+
+La création et la destruction de cette bulle repose sur trois méthodes intéressantes de l’objet `document`. Nous reviendrons sur ces méthodes plus tard dans le cours, mais vous pouvez en avoir un  premier aperçu :
+
+
+1. Voici le code de la fonction `construit_infobulle()` :
+
+        function construit_infobulle() {
+          var info = document.createElement('div');
+          info.innerHTML = "<p>c'est moi la bulle !</p>";
+          info.id = "bulle";
+          info.style.position = "fixed";
+          info.style.top = "100px";
+          info.style.right = "150px";
+          info.style.backgroundColor = "darkblue";
+          info.style.color = "white";
+          document.body.appendChild(info);
+        }
+
+
+   Décrivez ce que fait chaque ligne. Vous creuserez en particulier la première et la dernière ligne. Copiez ce code dans votre fichier `scripts_td1.js`. Lancez dans la console la commande `construit_infobulle();` Observez ce qui se passe par l’inspecteur d’objet.
+
+2. Stylisez un peu votre bulle en ajoutant quelques lignes à la fonction `construit_infobulle`. Vous pouvez ajouter du *padding*, un *border-radius* et un *box-shadow*, etc.
+
+3. Voici maintenant le code d’une fonction `detruit_bulle` :
+
+        function detruit_infobulle() {
+          var info = document.getElementById('bulle');
+          document.body.removeChild(info);
+        }
+
+   Que fait chaque ligne ?
+
+   Copiez ce code dans votre script et lancez-le depuis la console. Observez ce qui se passe dans l’inspecteur d’objet quand on alterne cette commande et la précédente.
+
+4. On peut renseigner d’autres attributs que `onclick` ou `ondblclick`. Par exemple, les attributs `onmouseover` et `onmouseout` existent aussi. Soyez malin et faites en sorte que l’info-bulle apparaisse au survol du **footer** et disparaisse à la fin de ce survol.
