@@ -54,10 +54,12 @@ Cet attribut _onclick_ permet un appel à un script JavaScript quand le lien est
 7. Juste avant la balise `</body>`, ajoutez le code suivant, et vérifiez que l’erreur précédente ne se produit plus.
 
 
-    <script type="text/javascript">
-        function adapter_galerie(nom) {
-            // à compléter
-        }
-    </script>
+        <script type="text/javascript">
+            function adapter_galerie(nom) {
+                // à compléter
+            }
+        </script>
+
+8. blablabla
 
 
