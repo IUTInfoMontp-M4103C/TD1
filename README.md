@@ -41,9 +41,9 @@ Dans ce TD1, vous commencez à coder en JavaScript, sans cours préalable. Pas d
 
 3. Réactualisez la page web. Cliquez sur le menu. Expliquez ce que vous constatez.
 
-4. Pour corriger l’erreur, modifiez le contenu de la balise html _<div class='galerie'>_ pour que par défaut elle affiche les roses, en remplaçant les évocations au PHP par ce qu’il faut.
+4. Pour corriger l’erreur, modifiez le contenu de la balise html `<div class='galerie'>` pour que par défaut elle affiche les roses, en remplaçant les évocations au PHP par ce qu’il faut.
 
-5. Modifiez les balises _<a>_ du menu pour les transformer ainsi :
+5. Modifiez les balises `<a>` du menu pour les transformer ainsi :
 
 <pre>
   <nav>
