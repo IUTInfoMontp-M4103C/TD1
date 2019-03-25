@@ -44,13 +44,7 @@ Dans ce TD1, vous commencez à coder en JavaScript, sans cours préalable. Pas d
 4. Pour corriger l’erreur, modifiez le contenu de la balise html `<div class='galerie'>` pour que par défaut elle affiche les roses, en remplaçant les évocations au PHP par ce qu’il faut.
 
 5. Modifiez les balises `<a>` du menu pour les transformer ainsi :
-  `<nav>
-    <ul>
-      <li><a href="#" onclick="adapter_galerie('rose');">rose</a></li>
-      <li><a href="#" onclick="adapter_galerie('hortensia');">hortensia</a></li>
-      <li><a href="#" onclick="adapter_galerie('fruitier');">fruitier</a></li>
-      <li><a href="#" onclick="adapter_galerie('autre');">autre</a></li>
-    </ul>
-  </nav>`
+
+![](ressources/img1.jpg)
 
 
