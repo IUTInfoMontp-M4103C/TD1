@@ -95,4 +95,8 @@ Cet attribut _onclick_ permet un appel à un script JavaScript quand le lien est
 
    Copiez le nouveau code de adapter_galerie, puis vérifiez vos  réponses par l’inspecteur d’éléments après les clics sur les  items du menu.
 
+10. Au survol d’une image de fleur, un titre s’affiche, car l’attribut *title* a été renseigné. Mais si on passe des roses à une autre catégorie de fleurs, on voit que le script n’a pas actualisé ce *title*. Corrigez le script en complétant la fonction **adapter_galerie** (inspirez-vous de la commande `image.src = …`) et vérifiez que le title est devenu dynamique.
 
+11. Si une image n’est pas trouvée par le serveur, l’attribut *alt* joue son rôle et affiche un texte de remplacement à l’image. Vérifiez ce rôle en changeant le nom de fichiers images (par exemple renommez les images rose1.jpg, hortensia1.jpg, fruitier1.jpg et autre1.jpg) et réactualisez la page. 
+
+    Observez ce qui se passe quand on choisit les différents items du menu. Corrigez le script pour éviter le problème constaté, et pour que les attributs alt soient construits comme ceux des roses. Vérifiez le bon fonctionnement du script puis redonnez leur nom d’origine aux images modifiées.
