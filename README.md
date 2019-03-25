@@ -9,6 +9,8 @@ Cliquez sur le lien ci-dessous pour faire, dans un dossier public_html/JS/TD1, v
 
 https://classroom.github.com/a/1pEh7RIt
 
+la version [pdf](ressources/TD1_dynamiser_une_page_web.pdf)
+
 ## INTRODUCTION
 
 Vos TD et projets de S1 (Conception Doc) vous ont appris à créer des sites web statiques, où les pages ne varient pas. Leur seul aspect dynamique était apporté pas le css qui permettait des effets (media querries, transitions, etc).
