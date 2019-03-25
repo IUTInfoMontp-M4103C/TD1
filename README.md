@@ -211,8 +211,15 @@ On peut aussi dynamiser le titre « Galerie de fleurs ». Ainsi, quand on cliq
 
 2. Créez une fonction `adapter_titre(nom)` qui modifie le contenu de la balise `<span>`. Cette fonction utilisera le tableau `tabTitres`. L’appel de cette fonction sera inséré dans la fonction `adapter_galerie`.
 
-   Indications : on peut modifier le contenu d’une balise comme `<span>` en changeant la valeur de son attribut `innerHTML` :
+   Indications : on peut modifier le contenu d’une balise comme `<span>` en changeant la valeur de son attribut `innerHTML`, avec une instruction similaire à :
 
         monParagraphe.innerHTML = 'Hello world !';
 
 
+## EXERCICE 5 - compléments pour la banière
+
+1. On peut annuler le défilement de la banière par une instruction `clearInterval(chb);`. Testez cette instruction dans la console.
+
+2. Comme `chb` est une variable « globale », on peut l’évoquer dans le corps d’une fonction. Créez une fonction `stopper_defilement` qui annulera le défilement de la banière, et programmez le lancement de cette fonction au clic sur la banière (attribut `onclick`). Vous pourrez vous inspirer des attributs `onclick` des items du menu.
+
+3. Créez une fonction `lancer_defilement` qui attribue à la variable `chb` la valeur `setInterval(change_baniere_v2,6000)`. Programmer la réactivation du défilement de la banière quand on double-clique dessus (associé à l’attribut `ondblclick`).
