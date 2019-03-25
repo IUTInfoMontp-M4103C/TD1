@@ -68,6 +68,32 @@ Cet attribut _onclick_ permet un appel à un script JavaScript quand le lien est
             }
         </script>
 
-8. blablabla
+8. Essayez, à la place du commentaire `// à compléter`, les divers codes suivants, et décrivez ce qu’ils font :
+
+
+        console.log("bonjour de la part du menu !");
+
+
+        console.log(nom);
+
+
+9. Analysez ensuite le code suivant pour anticiper ce qu’il va produire :
+
+
+        <script type="text/javascript">
+          function adapter_galerie(nom) {
+            for(var i = 1; i <= 6; i++) {
+              var image = document.getElementById('fleur' + i);
+              image.src = 'img/fleurs/' + nom + '/' + nom + '\_' + i + '.jpg';
+            }
+          }
+        </script>
+
+
+  Que renvoie `document.getElementById('fleur' + i)` ?
+
+  Que fait `image.src = …` ?
+
+  Copiez le nouveau code de adapter_galerie, puis vérifiez vos  réponses par l’inspecteur d’éléments après les clics sur les  items du menu.
 
 
