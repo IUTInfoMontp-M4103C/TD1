@@ -100,3 +100,95 @@ Cet attribut `onclick` permet un appel à un script JavaScript quand le lien est
 11. Si une image n’est pas trouvée par le serveur, l’attribut `alt` joue son rôle et affiche un texte de remplacement à l’image. Vérifiez ce rôle en changeant le nom de certains fichiers images (par exemple renommez l'image' `rose1.jpg` en `roseUn.jpg`) et réactualisez la page. 
 
     Observez ce qui se passe quand on choisit les différents items du menu. Corrigez le script pour éviter le problème constaté, et pour que les attributs alt soient construits comme ceux des roses. Vérifiez le bon fonctionnement du script puis redonnez leur nom d’origine aux images modifiées.
+
+
+## EXERCICE 3 - dynamiser la banière
+
+On va maintenant dynamiser la banière. Pour le moment, l'image est choisie au hasard parmi 6 possibles, lors de la requête initiale, grâce à une variable PHP. On va modifier la banière en incorporant toutes les images de cette façon : 
+
+
+    <div id="baniere">
+      <img id="1" class="img_baniere visible" alt="baniere" src="img/baniere/baniere_1.jpg">
+      <img id="2" class="img_baniere cachee" alt="baniere" src="img/baniere/baniere_2.jpg">
+      <img id="3" class="img_baniere cachee" alt="baniere" src="img/baniere/baniere_3.jpg">
+      <img id="4" class="img_baniere cachee" alt="baniere" src="img/baniere/baniere_4.jpg">
+      <img id="5" class="img_baniere cachee" alt="baniere" src="img/baniere/baniere_5.jpg">
+      <img id="6" class="img_baniere cachee" alt="baniere" src="img/baniere/baniere_6.jpg">
+    </div>
+
+
+Supprimez aussi les dernières lignes PHP en début de fichier. 
+
+La nouvelle structure html de la banière montre qu’il y a 6 images, dont une de classe « visible » et 5 de classe « cachee ».
+
+Derrière ces deux classes il y a une valeur différente de l’opacité de l’image (0 pour cachée et 1 pour visible, voir le css). Ces images sont superposées.
+
+L’idée est de créer différents effets de succession d’images.
+
+1. Créez, après le code de adapter_galerie(nom), une fonction cacher(im) qui cache l’image im passée en paramètre. Pour cela vous pourrez :
+- retirer la classe visible à l’image im
+- ajouter la classe cachee à l’image im
+
+Aide :
+
+- im.classList désigne la liste de classes attribuées à im
+
+- im.classList.add('nom_cl') ajoute la classe 'nom_cl' à im 
+
+- im.classList.remove('nom_cl') la lui retire
+
+
+2. Créez de même une fonction afficher(im)
+
+3. Créez ensuite une fonction suivant(n) qui retourne l’entier suivant n (au sens 1=>2, 2=>3, 3=>4, 4=>5, 5=>6 et 6=>1). En effet, il y a 6 images de banières et on va passer d’une banière à la suivante de façon naturelle sauf si on est à la sixième auquel cas on revient à la première.
+
+4. On va maintenant créer une fonction change_baniere_v1() qui :
+- récupère la banière visible ;
+- récupère l’id de cette banière ;
+- calcule le suivant de cet id ;
+- cache la banière actuellement visible ;
+- affiche la banière suivante.
+
+Pour récupérer la banière visible (qui n’est pas forcément la banière n°1, même si au chargement de la page, c’est le cas), on va se servir non pas de l’identifiant, mais du fait que la banière visible est LA SEULE banière qui a la classe visible. Or JavaScript permet de récupérer, sous forme de tableau, les éléments html de la page qui sont munis d’une certaine classe.
+
+Cela se fait par la méthode document.getElementsByClassName qui gère un argument chaîne de caractères.
+
+Dans le cas présent on pourra utiliser l’instruction 
+
+var tab = document.getElementsByClassName('visible');
+
+Remarque : vous pouvez lancer cette instruction dans la console de l’explorateur de document. Vous aurez alors en direct le tableau résultat de cette commande, affecté dans une variable nommée ici tab.
+
+En affichant tab (tab puis Entrée dans la console) vous aurez le résultat. Comme attendu, tab n’a qu’un seul élément, qui est accessible par tab[0]. Essayez dans la console.
+
+Dans le codage de la fonction change_baniere_v1, vous avez donc maintenant les moyens de récupérer la banière visible, puis son id, puis … Just do it. 
+Une fois que c’est fait, testez dans la console votre fonction en lançant l’instruction change_baniere_v1(); (sans oublier les parenthèses).
+
+
+ATTENTION : JavaScript peut avoir un comportement surprenant. Par exemple, l’opération "3" + 1 donne "31".  Ne soyez donc pas étonné si suivant("3") retourne "31". Par contre, 3 + 1 donne bien 4. Il peut donc être utile de transformer une chaîne de caractères (l’identifiant de la banière) en nombre. Pour cela, une multiplication par 1 fera l’affaire. Par exemple, "3"*1 + 1 donne 4 car "3"*1 est interprété en 3*1.
+
+
+
+5. Pour que la banière soit mise à jour automatiquement et à intervalles réguliers, et non pas à la main comme à la question précédente, ajoutez en fin de script (hors des fonctions) l’instruction 
+
+  var chb = setInterval(change_baniere_v1,6000);
+
+Ceci permet de créer une variable chb de type « timer ». Réactualisez la page. L’instruction précédente lance en boucle la fonction change_baniere_v1 à intervalles réguliers de 6000 ms.
+
+6. Récupérez l’ensemble de votre script, qui commence à être imposant, sauvegardez-le dans un fichier scripts_td1.js du répertoire public_html/JS/TD1/js et incorporez dans le html, à la place du script déplacé, la balise suivante, qui permet d’insérer l’ensemble du script :
+
+<script type="text/javascript" src="js/scripts_td1.js"></script>
+
+
+Enlevez aussi l’instruction PHP qui annonce l’appel au serveur. Vous avez compris qu’il n’y avait qu’un seul appel maintenant, et que tout est dynamisé côté client.
+
+Remarque importante : le chargement du script est bloquant pour le chargement des balises html. Il est donc important que les éléments html soient chargés avant que le script n’agisse. C’est pourquoi ce script est inséré juste avant la balise </body>.
+
+
+7. On va maintenant programmer une transition plus douce entre les différentes images de la banière. Pour cela, c’est très simple : il suffit d’ajouter une transition sur l’opacité quand on passe de la classe cachee à la classe visible et aussi de la classe visible à la classe cachee. Cela se fait par des instructions comme :
+
+  maBaniere.style.transition = "opacity 3s";
+
+Cette instruction JavaScript agit sur le css en écrivant  un style « inline » pour la balise, comme vous pouvez le constater par l’inspecteur d’objets.
+
+Créez une fonction change_baniere_v2 (sur la même base que change_baniere_v1) qui réalisera cette nouvelle transition, et que vous utiliserez à la place de change_baniere_v1 dans le setInterval.
