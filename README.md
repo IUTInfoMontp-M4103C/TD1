@@ -162,13 +162,16 @@ L’idée est de créer différents effets de succession d’images.
    Une fois que c’est fait, testez dans la console votre fonction en lançant l’instruction `change_baniere_v1();` (sans oublier les parenthèses).
 
 
-   **ATTENTION : JavaScript peut avoir un comportement surprenant. Par exemple, l’opération "3" + 1 donne "31".  Ne soyez donc pas étonné si suivant("3") retourne "31". Par contre, 3 + 1 donne bien 4. Il peut donc être utile de transformer une chaîne de caractères (l’identifiant de la banière) en nombre. Pour cela, une multiplication par 1 fera l’affaire. Par exemple, `"3"*1 + 1` donne `4` car `"3"*1 est interprété en 3*1`.**
+   **ATTENTION : JavaScript peut avoir un comportement surprenant. 
+   Par exemple, l’opération `"3" + 1` donne `"31"`.  Ne soyez donc pas étonné si `suivant("3")` retourne `"31"`. 
+   Par contre, `3 + 1` donne bien `4`. Il peut donc être utile de transformer une chaîne de caractères (l’identifiant de la banière) en nombre. Pour cela, une multiplication par `1` fera l’affaire. 
+   Par exemple, `"3"*1 + 1` donne `4` car `"3"*1 est interprété en 3*1`.**
 
 
 
 5. Pour que la banière soit mise à jour automatiquement et à intervalles réguliers, et non pas à la main comme à la question précédente, ajoutez en fin de script (hors des fonctions) l’instruction 
 
-  var chb = setInterval(change_baniere_v1,6000);
+   `var chb = setInterval(change_baniere_v1,6000);`
 
    Ceci permet de créer une variable `chb` de type **timer**. Réactualisez la page. L’instruction précédente lance en boucle la fonction `change_baniere_v1` à intervalles réguliers de 6000 ms.
 
