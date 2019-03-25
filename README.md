@@ -126,44 +126,44 @@ Derrière ces deux classes il y a une valeur différente de l’opacité de l’
 L’idée est de créer différents effets de succession d’images.
 
 1. Créez, après le code de `adapter_galerie(nom)`, une fonction `cacher(im)` qui cache l’image `im` passée en paramètre. Pour cela vous pourrez :
-  - retirer la classe `visible` à l’image `im`
-  - ajouter la classe `cachee` à l’image `im`
+    - retirer la classe `visible` à l’image `im`
+    - ajouter la classe `cachee` à l’image `im`
 
   Aide :
 
-  - `im.classList` désigne la liste de classes attribuées à `im`
-  - `im.classList.add('nom_cl')` ajoute la classe `nom_cl` à `im` 
-  - `im.classList.remove('nom_cl')` la lui retire
+    - `im.classList` désigne la liste de classes attribuées à `im`
+    - `im.classList.add('nom_cl')` ajoute la classe `nom_cl` à `im` 
+    - `im.classList.remove('nom_cl')` la lui retire
 
 
-2. Créez de même une fonction afficher(im)
+2. Créez de même une fonction `afficher(im)`
 
-3. Créez ensuite une fonction suivant(n) qui retourne l’entier suivant n (au sens 1=>2, 2=>3, 3=>4, 4=>5, 5=>6 et 6=>1). En effet, il y a 6 images de banières et on va passer d’une banière à la suivante de façon naturelle sauf si on est à la sixième auquel cas on revient à la première.
+3. Créez ensuite une fonction `suivant(n)` qui retourne l’entier suivant n (au sens 1=>2, 2=>3, 3=>4, 4=>5, 5=>6 et 6=>1). En effet, il y a 6 images de banières et on va passer d’une banière à la suivante de façon naturelle sauf si on est à la sixième auquel cas on revient à la première.
 
-4. On va maintenant créer une fonction change_baniere_v1() qui :
-- récupère la banière visible ;
-- récupère l’id de cette banière ;
-- calcule le suivant de cet id ;
-- cache la banière actuellement visible ;
-- affiche la banière suivante.
+4. On va maintenant créer une fonction `change_baniere_v1()` qui :
+    - récupère la banière visible ;
+    - récupère l’`id` de cette banière ;
+    - calcule le suivant de cet `id` ;
+    - cache la banière actuellement visible ;
+    - affiche la banière suivante.
 
-Pour récupérer la banière visible (qui n’est pas forcément la banière n°1, même si au chargement de la page, c’est le cas), on va se servir non pas de l’identifiant, mais du fait que la banière visible est LA SEULE banière qui a la classe visible. Or JavaScript permet de récupérer, sous forme de tableau, les éléments html de la page qui sont munis d’une certaine classe.
+   Pour récupérer la banière visible (qui n’est pas forcément la banière n°1, même si au chargement de la page, c’est le cas), on va se servir non pas de l’identifiant, mais du fait que la banière visible est LA SEULE banière qui a la classe visible. Or JavaScript permet de récupérer, sous forme de tableau, les éléments html de la page qui sont munis d’une certaine classe.
 
-Cela se fait par la méthode document.getElementsByClassName qui gère un argument chaîne de caractères.
+   Cela se fait par la méthode `document.getElementsByClassName` qui gère un argument chaîne de caractères.
 
-Dans le cas présent on pourra utiliser l’instruction 
+   Dans le cas présent on pourra utiliser l’instruction 
 
-var tab = document.getElementsByClassName('visible');
+   `let tab = document.getElementsByClassName('visible');`
 
-Remarque : vous pouvez lancer cette instruction dans la console de l’explorateur de document. Vous aurez alors en direct le tableau résultat de cette commande, affecté dans une variable nommée ici tab.
+   Remarque : vous pouvez lancer cette instruction dans la console de l’explorateur de document. Vous aurez alors en direct le tableau résultat de cette commande, affecté dans une variable nommée ici `tab`.
 
-En affichant tab (tab puis Entrée dans la console) vous aurez le résultat. Comme attendu, tab n’a qu’un seul élément, qui est accessible par tab[0]. Essayez dans la console.
+   En affichant `tab` (tab puis Entrée dans la console) vous aurez le résultat. Comme attendu, `tab` n’a qu’un seul élément, qui est accessible par `tab[0]`. Essayez dans la console.
 
-Dans le codage de la fonction change_baniere_v1, vous avez donc maintenant les moyens de récupérer la banière visible, puis son id, puis … Just do it. 
-Une fois que c’est fait, testez dans la console votre fonction en lançant l’instruction change_baniere_v1(); (sans oublier les parenthèses).
+   Dans le codage de la fonction `change_baniere_v1`, vous avez donc maintenant les moyens de récupérer la banière visible, puis son `id`, puis … Just do it. 
+   Une fois que c’est fait, testez dans la console votre fonction en lançant l’instruction `change_baniere_v1();` (sans oublier les parenthèses).
 
 
-ATTENTION : JavaScript peut avoir un comportement surprenant. Par exemple, l’opération "3" + 1 donne "31".  Ne soyez donc pas étonné si suivant("3") retourne "31". Par contre, 3 + 1 donne bien 4. Il peut donc être utile de transformer une chaîne de caractères (l’identifiant de la banière) en nombre. Pour cela, une multiplication par 1 fera l’affaire. Par exemple, "3"*1 + 1 donne 4 car "3"*1 est interprété en 3*1.
+   **ATTENTION** : JavaScript peut avoir un comportement surprenant. Par exemple, l’opération "3" + 1 donne "31".  Ne soyez donc pas étonné si suivant("3") retourne "31". Par contre, 3 + 1 donne bien 4. Il peut donc être utile de transformer une chaîne de caractères (l’identifiant de la banière) en nombre. Pour cela, une multiplication par 1 fera l’affaire. Par exemple, `"3"*1 + 1` donne `4` car `"3"*1 est interprété en 3*1`.
 
 
 
