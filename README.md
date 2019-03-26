@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # ![](ressources/logo.jpeg) Prog web client riche - JavaScript 
 
 ### IUT Montpellier-Sète – Département Informatique
