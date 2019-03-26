@@ -5,7 +5,7 @@
 ## TD1
 #### _Thème : dynamiser une page web_
 
-Cliquez sur le lien ci-dessous pour faire, dans un dossier public_html/JS/TD1, votre fork privé du TP (**attention, pas de fork à la main !**):
+Cliquez sur le lien ci-dessous pour faire, dans un dossier public_html/JS/TD1, votre fork privé du TD1 (**attention, pas de fork à la main !**):
 
 https://classroom.github.com/a/1pEh7RIt
 
