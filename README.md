@@ -110,12 +110,12 @@ On va maintenant dynamiser la banière. Pour le moment, l'image est choisie au h
 
 
     <div id="baniere">
-      <img id="1" class="img_baniere visible" alt="baniere" src="img/baniere/baniere_1.jpg">
-      <img id="2" class="img_baniere cachee" alt="baniere" src="img/baniere/baniere_2.jpg">
-      <img id="3" class="img_baniere cachee" alt="baniere" src="img/baniere/baniere_3.jpg">
-      <img id="4" class="img_baniere cachee" alt="baniere" src="img/baniere/baniere_4.jpg">
-      <img id="5" class="img_baniere cachee" alt="baniere" src="img/baniere/baniere_5.jpg">
-      <img id="6" class="img_baniere cachee" alt="baniere" src="img/baniere/baniere_6.jpg">
+      <img id="1" class="img_baniere visible" alt="baniere" src="img/baniere/baniere1.jpg">
+      <img id="2" class="img_baniere cachee" alt="baniere" src="img/baniere/baniere2.jpg">
+      <img id="3" class="img_baniere cachee" alt="baniere" src="img/baniere/baniere3.jpg">
+      <img id="4" class="img_baniere cachee" alt="baniere" src="img/baniere/baniere4.jpg">
+      <img id="5" class="img_baniere cachee" alt="baniere" src="img/baniere/baniere5.jpg">
+      <img id="6" class="img_baniere cachee" alt="baniere" src="img/baniere/baniere6.jpg">
     </div>
 
 
