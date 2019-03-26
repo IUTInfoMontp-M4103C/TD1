@@ -265,6 +265,4 @@ La création et la destruction de cette bulle repose sur trois méthodes intére
    Copiez ce code dans votre script et lancez-le depuis la console. Observez ce qui se passe dans l’inspecteur d’objet quand on alterne cette commande et la précédente.
 
 4. On peut renseigner d’autres attributs que `onclick` ou `ondblclick`. Par exemple, les attributs `onmouseover` et `onmouseout` existent aussi. Soyez malin et faites en sorte que l’info-bulle apparaisse au survol du **footer** et disparaisse à la fin de ce survol.
-=======
-# TD1
->>>>>>> 5ea6992f95f2b83b3f0a8a3a33d0f6957da5a6db
+
