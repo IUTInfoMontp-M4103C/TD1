@@ -83,8 +83,8 @@ Cet attribut `onclick` permet un appel à un script JavaScript quand le lien est
 
         <script type="text/javascript">
           function adapter_galerie(nom) {
-            for(var i = 1; i <= 6; i++) {
-              var image = document.getElementById('fleur' + i);
+            for(let i = 1; i <= 6; i++) {
+              let image = document.getElementById('fleur' + i);
               image.src = 'img/fleurs/' + nom + '/' + nom + i + '.jpg';
             }
           }
@@ -237,7 +237,7 @@ La création et la destruction de cette bulle repose sur trois méthodes intére
 1. Voici le code de la fonction `construit_infobulle()` :
 
         function construit_infobulle() {
-          var info = document.createElement('div');
+          let info = document.createElement('div');
           info.innerHTML = "<p>c'est moi la bulle !</p>";
           info.id = "bulle";
           info.style.position = "fixed";
