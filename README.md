@@ -23,7 +23,7 @@ JavaScript permet de rendre dynamique une page web par l’utilisation de script
 
 Dans certains cas, il peut être excessif de faire des appels permanents au serveur. Dans ce TD1 vous allez devoir modifier une page web qui pour le moment est en partie remplie via PHP, par des appels exagérés au serveur web.
 
-Créez dans votre public_html un dossier JS/TD1. C'est ce dossier qui accueillera le dépôt local en lien avec votre fork du TD1.
+Créez dans votre `public_html` un dossier `JS/TD`. C'est ce dossier qui accueillera le dépôt local en lien avec votre fork du TD1. Il est nécessaire que ce dépôt local soit dans votre `public_html` car le fichier index.php aura besoin d'un serveur web qui produira la page web bien construite.
 
 Dans ce TD1, vous commencez à coder en JavaScript, sans cours préalable. Pas d’inquiétude, vous avez déjà un passé de prog objet, et même s’il faut se méfier de pas mal de choses intuitives avec ce langage, cela ne vous empêchera pas de faire vos premiers pas en JavaScript !
 
@@ -99,7 +99,7 @@ Cet attribut `onclick` permet un appel à un script JavaScript quand le lien est
 
 10. Au survol d’une image de fleur, un titre s’affiche, car l’attribut `title` a été renseigné. Mais si on passe des roses à une autre catégorie de fleurs, on voit que le script n’a pas actualisé ce `title`. Corrigez le script en complétant la fonction `adapter_galerie` (inspirez-vous de la commande `image.src = …`) et vérifiez que le title est devenu dynamique.
 
-11. Si une image n’est pas trouvée par le serveur, l’attribut `alt` joue son rôle et affiche un texte de remplacement à l’image. Vérifiez ce rôle en changeant le nom de certains fichiers images (par exemple renommez l'image' `rose1.jpg` en `roseUn.jpg`) et réactualisez la page. 
+11. Si une image n’est pas trouvée par le serveur, l’attribut `alt` joue son rôle et affiche un texte de remplacement à l’image. Vérifiez ce rôle en changeant le nom de certains fichiers images (par exemple renommez l'image `rose1.jpg` en `roseUn.jpg`) et réactualisez la page. 
 
     Observez ce qui se passe quand on choisit les différents items du menu. Corrigez le script pour éviter le problème constaté, et pour que les attributs alt soient construits comme ceux des roses. Vérifiez le bon fonctionnement du script puis redonnez leur nom d’origine aux images modifiées.
 
