@@ -244,6 +244,7 @@ On peut aussi dynamiser le titre « Galerie de fleurs ». Ainsi, quand on cliq
 
         monParagraphe.innerHTML = 'Hello world !';
 
+   Remarque : il serait plus cohérent que, par défaut, le titre de la galerie soit "Galerie de roses". Vous pouvez le changer dans le html.
 
 ## EXERCICE 5 - compléments pour la banière
 
