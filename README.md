@@ -101,7 +101,7 @@ Dans ce TD1, vous commencez à coder en JavaScript, sans cours préalable. Pas d
 
    + Que fait `image.src = …` ?
 
-   Copiez le nouveau code de `adapter_galerie`, puis vérifiez vos  réponses par l’inspecteur d’éléments après les clics sur les  items du menu.
+   Copiez le nouveau code de `adapter_galerie`, puis vérifiez vos  réponses par l’inspecteur d’éléments après les clics sur les  items du menu. Vous prendrez lz temps d'inspecter les images et de constater que les attributs `src` ont été adaptés.
 
 10. Au survol d’une image de fleur, un titre s’affiche, car l’attribut `title` a été renseigné. Mais si on passe des roses à une autre catégorie de fleurs, on voit que le script n’a pas actualisé ce `title`. Corrigez le script en complétant la fonction `adapter_galerie` (inspirez-vous de la commande `image.src = …`) et vérifiez que le `title` est devenu dynamique.
 
