@@ -29,15 +29,13 @@ Dans ce TD1, vous commencez à coder en JavaScript, sans cours préalable. Pas d
 
 ## EXERCICE 1 - mécanisme client serveur
 
-1. Rappelez dans un schéma concis le mécanisme client-serveur qui permet de servir les pages web suite à une requête http. Dans quel contexte avez-vous utilisé ce mécanisme en S3 ?
-
-2. Appelez la page **index.php?fleur=rose** et expliquez le rôle de chaque instruction PHP de cette page (lignes 1 à 12, lignes 26 et 30, lignes 47 à 54).
+1. Appelez la page **index.php?fleur=rose** et expliquez le rôle de chaque instruction PHP de cette page (lignes 1 à 12, lignes 26 et 30, lignes 47 à 54).
 
 <p align="center">
    <img src="ressources/img3.png" width="800">
  </p>
 
-3. En cliquant sur un des 4 items du menu, on fait une requête http au serveur, en lui passant en GET une valeur de fleur. Expliquez ce qui est actualisé sur la page quand on clique sur un item du menu. Vous pouvez le voir en affichant le code source de la page, et en cliquant sur les liens du menu dans le code source. 
+2. En cliquant sur un des 4 items du menu, on fait une requête http au serveur, en lui passant en GET une valeur de fleur. Expliquez ce qui est actualisé sur la page quand on clique sur un item du menu.
 
 ## EXERCICE 2 - dynamiser le menu
 
