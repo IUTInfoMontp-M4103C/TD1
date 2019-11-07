@@ -79,11 +79,10 @@ Dans ce TD1, vous commencez à coder en JavaScript, sans cours préalable. Pas d
 
         console.log("bonjour de la part du menu !");
 
-        
         console.log(nom);
 
 
-9. Analysez ensuite le code suivant pour anticiper ce qu’il va produire :
+9. On souhaite essayer le code suivant :
 
 
         <script type="text/javascript">
@@ -96,9 +95,11 @@ Dans ce TD1, vous commencez à coder en JavaScript, sans cours préalable. Pas d
         </script>
 
 
-   Que renvoie `document.getElementById('fleur' + i)` ?
+   Avant de l'essayer, d'après vous :
+   
+   + Que renvoie `document.getElementById('fleur' + i)` ?
 
-   Que fait `image.src = …` ?
+   + Que fait `image.src = …` ?
 
    Copiez le nouveau code de `adapter_galerie`, puis vérifiez vos  réponses par l’inspecteur d’éléments après les clics sur les  items du menu.
 
