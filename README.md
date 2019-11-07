@@ -155,7 +155,16 @@ Vous allez créer différents effets de succession d’images.
 
    Si votre fonction est opérationnelle, l'image de la banière a dû disparaître...
 
-2. Créez de même une fonction `afficher(im)`
+2. Créez de même une fonction `afficher(im)`, rafraîchissez la page (pour charger le script complété) et testez la nouvelle fonction dans la console.
+
+
+        let img_ban_1 = document.getElementById('1');
+        let img_ban_2 = document.getElementById('2');
+        cacher(img_ban_1);
+        afficher(img_ban_2);
+        cacher(img_ban_2);
+        afficher(img_ban_1);
+
 
 3. Créez ensuite une fonction `suivant(n)` qui retourne l’entier suivant n (au sens 1=>2, 2=>3, 3=>4, 4=>5, 5=>6 et 6=>1). En effet, il y a 6 images de banières et on va passer d’une banière à la suivante de façon naturelle sauf si on est à la sixième auquel cas on revient à la première.
 
