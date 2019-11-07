@@ -43,7 +43,7 @@ Dans ce TD1, vous commencez à coder en JavaScript, sans cours préalable. Pas d
 
 2. Excluez de la partie PHP initiale (lignes 1 à 12) les lignes qui affectent une valeur à la variable `$fleur`.
 
-3. Réactualisez la page web. Cliquez sur le menu. Expliquez ce que vous constatez.
+3. Réactualisez la page web. Expliquez ce que vous constatez.
 
 4. Pour corriger l’erreur, modifiez le contenu de la balise html `<div class='galerie'>` pour que par défaut elle affiche les roses, en remplaçant les évocations au PHP par ce qu’il faut.
 
@@ -60,8 +60,10 @@ Dans ce TD1, vous commencez à coder en JavaScript, sans cours préalable. Pas d
         </nav>
 
 6. Ouvrez l’examinateur d’élément, menu « console » (F12), rafraîchissez la page, cliquez sur un item du menu et expliquez le message d’erreur qui apparaît.
-L’attribut `onclick` des balises `<a>` a pour valeur une chaîne   de caractères qui évoque l’exécution d’une fonction `adapter_galerie` avec un paramètre propre à chaque balise `<a>`.
-Cet attribut `onclick` permet un appel à un script JavaScript quand le lien est cliqué.
+
+  L’attribut `onclick` des balises `<a>` a pour valeur une chaîne   de caractères qui évoque l’exécution d’une fonction `adapter_galerie` avec un paramètre propre à chaque balise `<a>`.
+    
+  Cet attribut `onclick` permet un appel à un script JavaScript quand le lien est cliqué.
 
 7. Juste avant la balise `</body>`, ajoutez le code suivant, et vérifiez que l’erreur précédente ne se produit plus.
 
