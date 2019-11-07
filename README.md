@@ -79,6 +79,7 @@ Dans ce TD1, vous commencez à coder en JavaScript, sans cours préalable. Pas d
 
         console.log("bonjour de la part du menu !");
 
+        
         console.log(nom);
 
 
