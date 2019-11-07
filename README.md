@@ -116,7 +116,7 @@ Dans ce TD1, vous commencez à coder en JavaScript, sans cours préalable. Pas d
 
 ## EXERCICE 3 - dynamiser la banière
 
-On va maintenant dynamiser la banière. Pour le moment, l'image est choisie au hasard parmi 6 possibles, lors de la requête initiale, grâce à une variable PHP. On va modifier la banière en incorporant toutes les images de cette façon : 
+On va maintenant dynamiser la banière. Pour le moment, l'image est choisie au hasard parmi 6 possibles, lors de la requête initiale, grâce à une variable PHP. Modifiez la banière en incorporant toutes les images de cette façon : 
 
 
     <div id="baniere">
