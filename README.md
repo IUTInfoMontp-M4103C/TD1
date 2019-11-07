@@ -153,7 +153,7 @@ Vous allez créer différents effets de succession d’images.
         let img_ban_1 = document.getElementById('1');
         cacher(img_ban_1);
 
-  Si votre fonction est opérationnelle, l'image de la banière a dû disparaître...
+   Si votre fonction est opérationnelle, l'image de la banière a dû disparaître...
 
 2. Créez de même une fonction `afficher(im)`
 
