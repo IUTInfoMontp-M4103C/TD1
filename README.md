@@ -135,7 +135,7 @@ La nouvelle structure html de la banière montre qu’il y a 6 images, dont une 
 
 Derrière ces deux classes il y a une valeur différente de l’opacité de l’image (0 pour cachée et 1 pour visible, voir le css). Ces images sont superposées.
 
-Vous allez créer différents effets de succession d’images.
+Vous allez créer deux effets différents de succession d’images.
 
 1. Créez, dans la partie `<script>`, après le code de `adapter_galerie(nom)`, une fonction `cacher(im)` qui cache l’image `im` passée en paramètre. Pour cela vous pourrez :
     - retirer la classe `visible` à l’image `im`
