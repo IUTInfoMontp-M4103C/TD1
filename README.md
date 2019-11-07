@@ -143,9 +143,17 @@ Vous allez créer différents effets de succession d’images.
 
    Aide :
     - `im.classList` désigne la liste de classes attribuées à `im`
-    - `im.classList.add('nom_cl')` ajoute la classe `nom_cl` à `im` 
-    - `im.classList.remove('nom_cl')` la lui retire
+    - `im.classList.add('nom_classe')` ajoute la classe `nom_classe` à `im` 
+    - `im.classList.remove('nom_classe')` la lui retire
 
+
+2. Actualisez votre page. Dans la console, testez votre nouvelle fonction en entrant les instructions suivantes :
+
+
+        let img_ban_1 = document.getElementById('1');
+        cacher(img_ban_1);
+
+  Si votre fonction est opérationnelle, l'image de la banière a dû disparaître...
 
 2. Créez de même une fonction `afficher(im)`
 
