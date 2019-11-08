@@ -56,7 +56,7 @@
         </div>
       </main>
       <footer>
-        <p>JavaScript 2019</p>
+        <p>JavaScript 2020</p>
         <p>TD1 - dynamiser les pages web</p>
       </footer>
     </div>
