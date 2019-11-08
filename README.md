@@ -257,9 +257,9 @@ On peut aussi dynamiser le titre « Galerie de fleurs ». Ainsi, quand on cliq
 
 ## EXERCICE 6 - création d'une info-bulle
 
-L’idée est de créer une info-bulle toute simple qui apparaît au survol du **footer** et disparaît après ce survol.
+Vous devez maintenant créer une info-bulle toute simple qui apparaît au survol du **footer** et disparaît après ce survol.
 
-La création et la destruction de cette bulle repose sur trois méthodes intéressantes de l’objet `document`. Nous reviendrons sur ces méthodes plus tard dans le cours, mais vous pouvez en avoir un  premier aperçu :
+La création et la destruction de cette bulle reposent sur trois méthodes intéressantes de l’objet `document`. Nous reviendrons sur ces méthodes plus tard dans le cours, mais vous pouvez en avoir un  premier aperçu :
 
 
 1. Voici le code de la fonction `construit_infobulle()` :
