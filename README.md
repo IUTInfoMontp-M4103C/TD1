@@ -281,6 +281,8 @@ La création et la destruction de cette bulle reposent sur trois méthodes inté
 
 2. Stylisez un peu votre bulle en ajoutant quelques lignes à la fonction `construit_infobulle`. Vous pouvez ajouter du *padding*, un *border-radius* et un *box-shadow*, etc.
 
+   Remarque : on aurait bien sûr pu isoler toutes les lignes `info.style....` dans un fichier css et ne garder que les autres lignes pour le JavaScript. Ici l'objectif est de montrer qu'on peut agir sur le css d'un élément en injectant du style `inline` (ce qui est plutôt déconseillé en général).
+
 3. Voici maintenant le code d’une fonction `detruit_bulle` :
 
         function detruit_infobulle() {
