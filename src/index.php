@@ -25,6 +25,7 @@
   <body>
     <?php echo "<p>appel serveur à ".date('H:i:s')."</p>"; ?>
     <div id="page">
+      <img id="parametres" src="img/divers/parametres.png">
       <header>
         <div id="baniere">
             <img id="1" class="img_baniere visible" alt="baniere" src="img/baniere/baniere<?php echo $num_baniere; ?>.jpg">
