@@ -29,7 +29,7 @@ Dans ce TD1, vous commencez à coder en JavaScript, sans cours préalable. Pas d
 
 ## EXERCICE 1 - mécanisme client serveur
 
-1. Appelez la page **index.php?fleur=rose** et expliquez le rôle de chaque instruction PHP de cette page (lignes 1 à 12, lignes 26 et 30, lignes 47 à 54).
+1. Appelez la page **index.php?fleur=rose** et expliquez le rôle de chaque instruction PHP de cette page (lignes 1 à 12, lignes 26 et 30, lignes 48 à 55).
 
 <p align="center">
    <img src="ressources/img3.png" width="800">
@@ -297,13 +297,14 @@ La création et la destruction de cette bulle reposent sur trois méthodes inté
 4. On peut renseigner d’autres attributs que `onclick` ou `ondblclick`. Par exemple, les attributs `onmouseover` et `onmouseout` existent aussi. Soyez malin et faites en sorte que l’info-bulle apparaisse au survol du **footer** et disparaisse à la fin de ce survol.
 
 
-## EXERCICE 7 - Et pour quelques mnutes de plus...
+## EXERCICE 7 - Et pour quelques minutes de plus...
 
-Vous allez reprendre le thème de l'exercice 6. Ici, il faut, uniquement par le biais de JavaScript, et sans toucher au code HTML :
+1. Renseignez l'attribut `onclick` de la balise `<img id="parametres"...>` pour permettre le lancement, au clic, de l'instruction `changer_paramètres()` correspondant à une fonction que vous allez écrire.
 
-+ insérer une balise image à un endroit précis du balisage;
-+ donner des éléments de style à cette balise;
-+ définir l'attribut `onclick` de cette image;
-+ coder la fonction correspondant au clic.
+2. codez la fonction en question pour qu'elle :
 
-1. créez une balise de type `<img>` en réutilisant une instruction comme `let info = document.createElement('div');`
+   + génère un nombre entier aléatoire entre 1 et 4;
+   + modifie l'image de fond du `body` en lui donnant comme nouvelle url celle correspondant au fichier image dont le nom correspond au nombre aléatoire ci-dessus (il y a dans le dossier `img/background` 4 fichiers `bg-1.jpg`, ..., `bg-4.jpg`)
+
+3. comme le nombre généré peut être répété, on peut parfois avoir l'impression que la fonction est inopérante, alors qu'elle a juste remplacé une image par elle-même. Débrouillez-vous pour éviter ce petit inconvénient.
+ 
