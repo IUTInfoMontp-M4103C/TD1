@@ -296,3 +296,14 @@ La création et la destruction de cette bulle reposent sur trois méthodes inté
 
 4. On peut renseigner d’autres attributs que `onclick` ou `ondblclick`. Par exemple, les attributs `onmouseover` et `onmouseout` existent aussi. Soyez malin et faites en sorte que l’info-bulle apparaisse au survol du **footer** et disparaisse à la fin de ce survol.
 
+
+## EXERCICE 7 - Et pour quelques mnutes de plus...
+
+Vous allez reprendre le thème de l'exercice 6. Ici, il faut, uniquement par le biais de JavaScript, et sans toucher au code HTML :
+
++ insérer une balise image à un endroit précis du balisage;
++ donner des éléments de style à cette balise;
++ définir l'attribut `onclick` de cette image;
++ coder la fonction correspondant au clic.
+
+1. créez une balise de type `<img>` en réutilisant une instruction comme `let info = document.createElement('div');`
