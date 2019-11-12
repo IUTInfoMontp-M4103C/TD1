@@ -299,7 +299,7 @@ La création et la destruction de cette bulle reposent sur trois méthodes inté
 
 ## EXERCICE 7 - Et pour quelques minutes de plus...
 
-1. Renseignez l'attribut `onclick` de la balise `<img id="parametres"...>` pour permettre le lancement, au clic, de l'instruction `changer_paramètres()` correspondant à une fonction que vous allez écrire.
+1. Renseignez l'attribut `onclick` de la balise `<img id="parametres"...>` pour permettre le lancement, au clic, de l'instruction `changer_parametres()` correspondant à une fonction que vous allez écrire.
 
 2. codez la fonction en question pour qu'elle :
 
