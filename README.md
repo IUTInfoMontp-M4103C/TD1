@@ -246,7 +246,7 @@ On peut aussi dynamiser le titre « Galerie de fleurs ». Ainsi, quand on cliq
 
    Remarque : il serait plus cohérent que, par défaut, le titre de la galerie soit "Galerie de roses". Vous pouvez le changer dans le html.
 
-   Remarque 2 : LEs tableaux associatifs, utilisés en PHP, n'existent pas en JavaScript.
+   Remarque 2 : Les tableaux associatifs, utilisés en PHP, n'existent pas en JavaScript.
 
 ## EXERCICE 5 - compléments pour la banière
 
