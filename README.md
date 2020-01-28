@@ -286,7 +286,7 @@ La création et la destruction de cette bulle reposent sur trois méthodes inté
 3. Voici maintenant le code d’une fonction `detruit_bulle` :
 
         function detruit_infobulle() {
-          var info = document.getElementById('bulle');
+          let info = document.getElementById('bulle');
           document.body.removeChild(info);
         }
 
