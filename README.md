@@ -232,13 +232,13 @@ On peut aussi dynamiser le titre « Galerie de fleurs ». Ainsi, quand on cliq
 
 
         let tabTitres = new Array();
-        tabTitres['rose'] = 'Galerie de roses';
-        tabTitres['hortensia'] = 'Galerie d\’hortensias';
-        tabTitres['fruitier'] = 'Galerie de fruitiers';
-        tabTitres['autre'] = 'Galerie de fleurs diverses';
+        tabTitres[0] = 'Galerie de roses';
+        tabTitres[1] = 'Galerie d\’hortensias';
+        tabTitres[2] = 'Galerie de fruitiers';
+        tabTitres[3] = 'Galerie de fleurs diverses';
 
 
-2. Créez une fonction `adapter_titre(nom)` qui modifie le contenu de la balise `<span>`. Cette fonction utilisera le tableau `tabTitres`. L’appel de cette fonction sera inséré dans la fonction `adapter_galerie`.
+2. Créez une fonction `adapter_titre(num)` qui modifie le contenu de la balise `<span>`. Cette fonction utilisera le tableau `tabTitres`. L’appel de cette fonction sera inséré dans la fonction `adapter_galerie`. Le paramètre `num` est censé prendre comme valeurs 0, 1, 2 ou 3. Il faudra, dans la fonction `adapter_galerie`, créer une variable locale `num` qui prendra la valeur adéquate 0, 1, 2 ou 3 en fonction de la chaîne de caractères `nom` passée en paramètres de `adapter_galerie`.
 
    Indications : on peut modifier le contenu d’une balise comme `<span>` en changeant la valeur de son attribut `innerHTML`, avec une instruction similaire à :
 
