@@ -231,11 +231,7 @@ On peut aussi dynamiser le titre « Galerie de fleurs ». Ainsi, quand on cliq
 1. Au même niveau que la variable `chb` (c’est-à-dire avec un statut de variable globale), créez un tableau nommé `tabTitres` de la façon suivante :
 
 
-        let tabTitres = new Array();
-        tabTitres[0] = 'Galerie de roses';
-        tabTitres[1] = 'Galerie d\’hortensias';
-        tabTitres[2] = 'Galerie de fruitiers';
-        tabTitres[3] = 'Galerie de fleurs diverses';
+        let tabTitres = ['Galerie de roses','Galerie d\’hortensias','Galerie de fruitiers','Galerie de fleurs diverses'];
 
 
 2. Créez une fonction `adapter_titre(num)` qui modifie le contenu de la balise `<span>`. Cette fonction utilisera le tableau `tabTitres`. L’appel de cette fonction sera inséré dans la fonction `adapter_galerie`. Le paramètre `num` est censé prendre comme valeurs 0, 1, 2 ou 3. Il faudra, dans la fonction `adapter_galerie`, créer une variable locale `num` qui prendra la valeur adéquate 0, 1, 2 ou 3 en fonction de la chaîne de caractères `nom` passée en paramètres de `adapter_galerie`.
