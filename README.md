@@ -228,21 +228,26 @@ Vous allez créer deux effets différents de succession d’images.
 
 On peut aussi dynamiser le titre « Galerie de fleurs ». Ainsi, quand on cliquera sur l’item **hortensia** du menu, le titre sera mis à jour en « **Galerie d’hortensias** » et de même pour les autres items.
 
-1. Au même niveau que la variable `chb` (c’est-à-dire avec un statut de variable globale), créez un tableau nommé `tabTitres` de la façon suivante :
+1. Au même niveau que la variable `chb` (c’est-à-dire avec un statut de variable globale), créez un objet nommé `tabTitres` de la façon suivante :
 
 
-        let tabTitres = ['Galerie de roses','Galerie d\’hortensias','Galerie de fruitiers','Galerie de fleurs diverses'];
+        let tabTitres = {
+        'rose' : 'Galerie de roses',
+        'hortensia': 'Galerie d\’hortensias',
+        'fruitier': 'Galerie de fruitiers',
+        'autre': 'Galerie de fleurs diverses',
+        };
 
 
-2. Créez une fonction `adapter_titre(num)` qui modifie le contenu de la balise `<span>`. Cette fonction utilisera le tableau `tabTitres`. L’appel de cette fonction sera inséré dans la fonction `adapter_galerie`. Le paramètre `num` est censé prendre comme valeurs 0, 1, 2 ou 3. Il faudra, dans la fonction `adapter_galerie`, créer une variable locale `num` qui prendra la valeur adéquate 0, 1, 2 ou 3 en fonction de la chaîne de caractères `nom` passée en paramètres de `adapter_galerie`.
+
+
+2. Créez une fonction `adapter_titre(nom)` qui modifie le contenu de la balise `<span>`. Cette fonction utilisera le tableau `tabTitres`. L’appel de cette fonction sera inséré dans la fonction `adapter_galerie`. .
 
    Indications : on peut modifier le contenu d’une balise comme `<span>` en changeant la valeur de son attribut `innerHTML`, avec une instruction similaire à :
 
         monParagraphe.innerHTML = 'Hello world !';
 
    Remarque : il serait plus cohérent que, par défaut, le titre de la galerie soit "Galerie de roses". Vous pouvez le changer dans le html.
-
-   Remarque 2 : Les tableaux associatifs, utilisés en PHP, n'existent pas en JavaScript.
 
 ## EXERCICE 5 - compléments pour la banière
 
