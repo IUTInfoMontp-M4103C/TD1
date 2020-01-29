@@ -235,7 +235,7 @@ On peut aussi dynamiser le titre « Galerie de fleurs ». Ainsi, quand on cliq
         'rose' : 'Galerie de roses',
         'hortensia': 'Galerie d\’hortensias',
         'fruitier': 'Galerie de fruitiers',
-        'autre': 'Galerie de fleurs diverses',
+        'autre': 'Galerie de fleurs diverses'
         };
 
 
