@@ -191,7 +191,7 @@ Vous allez créer deux effets différents de succession d’images.
    Une fois que c’est fait, testez dans la console votre fonction en lançant l’instruction `change_banniere_v1();` (sans oublier les parenthèses).
 
 
-   **ATTENTION : JavaScript peut avoir un comportement surprenant. 
+   **ATTENTION :** JavaScript peut avoir un comportement surprenant. 
    Par exemple, l’opération `"3" + 1` donne `"31"`.  Ne soyez donc pas étonné si `suivant("3")` retourne `"31"`. 
    Par contre, `3 + 1` donne bien `4`. Il peut donc être utile de transformer une chaîne de caractères (l’identifiant de la bannière) en nombre. Pour cela, vous pouvez convertir une chaîne de caractères en nombre à l'aide de la fonction `Number(x)` (par exemple `Number("3") + 1` donne bien `4`).
 
