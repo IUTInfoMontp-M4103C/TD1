@@ -202,10 +202,10 @@ Vous allez créer deux effets différents de succession d’images.
 
    Ceci permet de créer une variable `chb` de type **timer**. Réactualisez la page. L’instruction précédente lance en boucle la fonction `change_banniere_v1` à intervalles réguliers de 6000 ms.
 
-6. Récupérez l’ensemble de votre script, qui commence à être imposant, sauvegardez-le dans un fichier `scripts_td1.js` du répertoire `public_html/JS/TD/TD1/js` et incorporez dans le html, à la place du script déplacé, la balise suivante, qui permet d’insérer l’ensemble du script :
+6. Récupérez l’ensemble de votre script, qui commence à être imposant, sauvegardez-le dans un fichier `script_td1.js` du répertoire `public_html/JS/TD/TD1/js` et incorporez dans le html, à la place du script déplacé, la balise suivante, qui permet d’insérer l’ensemble du script :
 
 
-        <script type="text/javascript" src="js/scripts_td1.js"></script>
+        <script type="text/javascript" src="js/script_td1.js"></script>
 
 
    Enlevez aussi l’instruction PHP qui annonce l’appel au serveur. Vous avez compris qu’il n’y avait qu’un seul appel maintenant, et que tout est dynamisé côté client.
