@@ -1,4 +1,4 @@
-# ![](ressources/logo.jpeg) Prog web client riche - JavaScript 
+# ![](ressources/logo.jpeg) Prog web client riche - JavaScript
 
 ### IUT Montpellier-Sète – Département Informatique
 
@@ -14,14 +14,16 @@ https://classroom.github.com/a/3S6hMQt6
 ## INTRODUCTION
 
 Vos TD et projets de S1 (Conception Doc) vous ont appris à créer des sites web statiques, où les pages ne varient pas. Leur seul aspect "dynamique" était apporté par le css qui permettait des effets (media queries, transitions, etc).
-  
+
 En S3 vous avez appris à réellement dynamiser vos sites web en utilisant des appels au serveur web, avec des pages web construites par le serveur, en fonction de données recueillies sur la base de données ou par le biais de formulaires, et au moyen du langage PHP.
 
 L’aspect dynamique de ces sites tient donc au fait que le serveur web construit la page sur demande (en fonction de l’utilisateur, des données d’un formulaire, etc). La page construite est donc fonction des circonstances, et c’est ce qui lui donne son caractère dynamique.
 
 JavaScript permet de rendre dynamique une page web par l’utilisation de scripts, en réponse à des sollicitations côté client. Par exemple, des événements comme un clic de souris, une action au clavier, etc. Ici l’aspect dynamique est indépendant d’un appel serveur.
 
-Dans certains cas, il peut être excessif de faire des appels permanents au serveur. Dans ce TD1 vous allez devoir modifier une page web qui pour le moment est en partie remplie via PHP, par des appels exagérés au serveur web.
+Dans certains cas, il peut être excessif de faire des appels permanents au serveur. En effet, une requête HTTP, génération de page PHP puis réponse HTTP prend du temps et des ressources informatiques, alors il est toujours mieux de s'en passer. Dans ce TD1 vous allez devoir modifier une page web qui pour le moment est en partie remplie via PHP, par des appels exagérés au serveur web.
+
+**TODO À changer**
 
 Créez dans votre `public_html` un dossier `JS/TD`. C'est ce dossier qui accueillera le dépôt local en lien avec votre fork du TD1. Il est nécessaire que ce dépôt local soit dans votre `public_html` car le fichier `index.php` aura besoin d'un serveur web qui produira la page web bien construite.
 
@@ -62,7 +64,7 @@ Dans ce TD1, vous commencez à coder en JavaScript, sans cours préalable. Pas d
 6. Ouvrez l’examinateur d’élément, menu « console » (F12), rafraîchissez la page, cliquez sur un item du menu et expliquez le message d’erreur qui apparaît.
 
    L’attribut `onclick` des balises `<a>` a pour valeur une chaîne   de caractères qui évoque l’exécution d’une fonction `adapter_galerie` avec un paramètre propre à chaque balise `<a>`.
-  
+
    Cet attribut `onclick` permet un appel à un script JavaScript quand le lien est cliqué.
 
 7. Juste avant la balise `</body>`, ajoutez le code suivant, et vérifiez que l’erreur précédente ne se produit plus.
@@ -96,27 +98,27 @@ Dans ce TD1, vous commencez à coder en JavaScript, sans cours préalable. Pas d
 
 
    Avant de l'essayer, d'après vous :
-   
+
    + Que renvoie `document.getElementById('fleur' + i)` ?
 
    + Que fait `image.src = …` ?
 
-   Copiez le nouveau code de `adapter_galerie`, puis vérifiez vos  réponses par l’inspecteur d’éléments après les clics sur les  items du menu. 
+   Copiez le nouveau code de `adapter_galerie`, puis vérifiez vos  réponses par l’inspecteur d’éléments après les clics sur les  items du menu.
 
    Vous prendrez le temps d'inspecter les images et de constater que les attributs `src` ont été adaptés.
 
 10. Au survol d’une image de fleur, un titre s’affiche, car l’attribut `title` a été renseigné. Mais si on passe des roses à une autre catégorie de fleurs, on voit que le script n’a pas actualisé ce `title`. Corrigez le script en complétant la fonction `adapter_galerie` (inspirez-vous de la commande `image.src = …`) et vérifiez que le `title` est devenu dynamique.
 
-11. Si une image n’est pas trouvée par le serveur, l’attribut `alt` joue son rôle et affiche un texte de remplacement à l’image. Vérifiez ce rôle en changeant le nom de certains fichiers images (par exemple renommez l'image `rose1.jpg` en `roseUn.jpg`) et réactualisez la page (`CTRL` `F5` par exemple) 
+11. Si une image n’est pas trouvée par le serveur, l’attribut `alt` joue son rôle et affiche un texte de remplacement à l’image. Vérifiez ce rôle en changeant le nom de certains fichiers images (par exemple renommez l'image `rose1.jpg` en `roseUn.jpg`) et réactualisez la page (`CTRL` `F5` par exemple)
 
-    Observez ce qui se passe au niveau des attributs `alt` quand on choisit les différents items du menu. Ils sont encore statiques... 
+    Observez ce qui se passe au niveau des attributs `alt` quand on choisit les différents items du menu. Ils sont encore statiques...
 
     Corrigez le script pour que les attributs `alt` soient construits comme ceux des roses : "hortensia1", "fruitier2" etc. Vérifiez le bon fonctionnement du script puis redonnez leur nom d’origine aux images modifiées.
 
 
 ## EXERCICE 3 - dynamiser la bannière
 
-On va maintenant dynamiser la bannière. Pour le moment, l'image est choisie au hasard parmi 6 possibles, lors de la requête initiale, grâce à une variable PHP. Modifiez la bannière en incorporant toutes les images de cette façon : 
+On va maintenant dynamiser la bannière. Pour le moment, l'image est choisie au hasard parmi 6 possibles, lors de la requête initiale, grâce à une variable PHP. Modifiez la bannière en incorporant toutes les images de cette façon :
 
 
     <div id="banniere">
@@ -129,7 +131,7 @@ On va maintenant dynamiser la bannière. Pour le moment, l'image est choisie au 
     </div>
 
 
-Supprimez aussi les dernières lignes PHP en début de fichier. 
+Supprimez aussi les dernières lignes PHP en début de fichier.
 
 La nouvelle structure html de la bannière montre qu’il y a 6 images, dont une de classe « visible » et 5 de classe « cachee ».
 
@@ -143,7 +145,7 @@ Vous allez créer deux effets différents de succession d’images.
 
    Aide :
     - `im.classList` désigne la liste de classes attribuées à `im`
-    - `im.classList.add('nom_classe')` ajoute la classe `nom_classe` à `im` 
+    - `im.classList.add('nom_classe')` ajoute la classe `nom_classe` à `im`
     - `im.classList.remove('nom_classe')` la lui retire
 
 
@@ -179,7 +181,7 @@ Vous allez créer deux effets différents de succession d’images.
 
    Cela se fait par la méthode `document.getElementsByClassName` qui gère un argument chaîne de caractères.
 
-   Dans le cas présent on pourra utiliser l’instruction 
+   Dans le cas présent on pourra utiliser l’instruction
 
    `let tab = document.getElementsByClassName('visible');`
 
@@ -187,16 +189,16 @@ Vous allez créer deux effets différents de succession d’images.
 
    En affichant `tab` (tab puis Entrée dans la console) vous aurez le résultat. Comme attendu, `tab` n’a qu’un seul élément, qui est accessible par `tab[0]`. Essayez dans la console.
 
-   Dans le codage de la fonction `change_banniere_v1`, vous avez donc maintenant les moyens de récupérer la bannière visible, puis son `id`, puis … Just do it. 
+   Dans le codage de la fonction `change_banniere_v1`, vous avez donc maintenant les moyens de récupérer la bannière visible, puis son `id`, puis … Just do it.
    Une fois que c’est fait, testez dans la console votre fonction en lançant l’instruction `change_banniere_v1();` (sans oublier les parenthèses).
 
 
-   **ATTENTION :** JavaScript peut avoir un comportement surprenant. 
-   Par exemple, l’opération `"3" + 1` donne `"31"`.  Ne soyez donc pas étonné si `suivant("3")` retourne `"31"`. 
+   **ATTENTION :** JavaScript peut avoir un comportement surprenant.
+   Par exemple, l’opération `"3" + 1` donne `"31"`.  Ne soyez donc pas étonné si `suivant("3")` retourne `"31"`.
    Par contre, `3 + 1` donne bien `4`. Il peut donc être utile de transformer une chaîne de caractères (l’identifiant de la bannière) en nombre. Pour cela, vous pouvez convertir une chaîne de caractères en nombre à l'aide de la fonction `Number(x)` (par exemple `Number("3") + 1` donne bien `4`).
 
 
-5. Pour que la bannière soit mise à jour automatiquement et à intervalles réguliers, et non pas à la main comme à la question précédente, ajoutez en fin de script (hors des fonctions) l’instruction 
+5. Pour que la bannière soit mise à jour automatiquement et à intervalles réguliers, et non pas à la main comme à la question précédente, ajoutez en fin de script (hors des fonctions) l’instruction
 
    `let chb = setInterval(change_banniere_v1,6000);`
 
@@ -228,24 +230,24 @@ On peut aussi dynamiser le titre « Galerie de fleurs ». Ainsi, quand on cliq
 
 1. Au même niveau que la variable `chb` (c’est-à-dire avec un statut de variable globale), créez un objet nommé `tabTitres` de la façon suivante :
 
-
-        let tabTitres = {
-        'rose' : 'Galerie de roses',
-        'hortensia': 'Galerie d\’hortensias',
-        'fruitier': 'Galerie de fruitiers',
-        'autre': 'Galerie de fleurs diverses'
-        };
-
-
-
+  ```javascript
+  const tabTitres = {
+    'rose' : 'Galerie de roses',
+    'hortensia': 'Galerie d\’hortensias',
+    'fruitier': 'Galerie de fruitiers',
+    'autre': 'Galerie de fleurs diverses'
+  };
+  ```
 
 2. Créez une fonction `adapter_titre(nom)` qui modifie le contenu de la balise `<span>`. Cette fonction utilisera le tableau `tabTitres`. L’appel de cette fonction sera inséré dans la fonction `adapter_galerie`.
 
-   Indications : on peut modifier le contenu d’une balise comme `<span>` en changeant la valeur de son attribut `innerHTML`, avec une instruction similaire à :
+   **Indications :** on peut modifier le contenu d’une balise comme `<span>` en changeant la valeur de son attribut `innerHTML`, avec une instruction similaire à :
 
-        monParagraphe.innerHTML = 'Hello world !';
+    ```javascript
+    monParagraphe.innerHTML = 'Hello world !';
+    ```
 
-   Remarque : il serait plus cohérent que, par défaut, le titre de la galerie soit "Galerie de roses". Vous pouvez le changer dans le html.
+   **Remarque :** il serait plus cohérent que, par défaut, le titre de la galerie soit "Galerie de roses". Vous pouvez le changer dans le html.
 
 ## EXERCICE 5 - compléments pour la bannière
 
@@ -308,4 +310,4 @@ La création et la destruction de cette bulle reposent sur trois méthodes inté
    + modifie l'image de fond du `body` en lui donnant comme nouvelle url celle correspondant au fichier image dont le nom correspond au nombre aléatoire ci-dessus (il y a dans le dossier `img/background` 4 fichiers `bg-1.jpg`, ..., `bg-4.jpg`)
 
 3. comme le nombre généré peut être répété, on peut parfois avoir l'impression que la fonction est inopérante, alors qu'elle a juste remplacé une image par elle-même. Débrouillez-vous pour éviter ce petit inconvénient.
- 
+
