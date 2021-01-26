@@ -51,15 +51,16 @@ Dans ce TD1, vous commencez à coder en JavaScript, sans cours préalable. Pas d
 
 5. Modifiez les balises `<a>` du menu pour les transformer ainsi :
 
-
-        <nav>
-          <ul>
-            <li><a href="#" onclick="adapter_galerie('rose');">rose</a></li>
-            <li><a href="#" onclick="adapter_galerie('hortensia');">hortensia</a></li>
-            <li><a href="#" onclick="adapter_galerie('fruitier');">fruitier</a></li>
-            <li><a href="#" onclick="adapter_galerie('autre');">autre</a></li>
-          </ul>
-        </nav>
+   ```html
+   <nav>
+     <ul>
+       <li><a href="#" onclick="adapter_galerie('rose');">rose</a></li>
+       <li><a href="#" onclick="adapter_galerie('hortensia');">hortensia</a></li>
+       <li><a href="#" onclick="adapter_galerie('fruitier');">fruitier</a></li>
+       <li><a href="#" onclick="adapter_galerie('autre');">autre</a></li>
+     </ul>
+   </nav>
+   ```
 
 6. Ouvrez l’examinateur d’élément, menu « console » (F12), rafraîchissez la page, cliquez sur un item du menu et expliquez le message d’erreur qui apparaît.
 
@@ -69,33 +70,33 @@ Dans ce TD1, vous commencez à coder en JavaScript, sans cours préalable. Pas d
 
 7. Juste avant la balise `</body>`, ajoutez le code suivant, et vérifiez que l’erreur précédente ne se produit plus.
 
-
-        <script type="text/javascript">
-            function adapter_galerie(nom) {
-                // à compléter
-            }
-        </script>
+   ```html
+   <script type="text/javascript">
+       function adapter_galerie(nom) {
+           // à compléter
+       }
+   </script>
+   ```
 
 8. Essayez, à la place du commentaire `// à compléter`, les divers codes suivants, et décrivez ce qu’ils font :
 
-
-        console.log("bonjour de la part du menu !");
-
-        console.log(nom);
-
+   ```javascript
+   console.log("bonjour de la part du menu !");
+   console.log(nom);
+   ```
 
 9. On souhaite essayer le code suivant :
 
-
-        <script type="text/javascript">
-          function adapter_galerie(nom) {
-            for(let i = 1; i <= 6; i++) {
-              let image = document.getElementById('fleur' + i);
-              image.src = 'img/fleurs/' + nom + '/' + nom + i + '.jpg';
-            }
-          }
-        </script>
-
+   ```html
+   <script type="text/javascript">
+     function adapter_galerie(nom) {
+       for(let i = 1; i <= 6; i++) {
+         let image = document.getElementById('fleur' + i);
+         image.src = 'img/fleurs/' + nom + '/' + nom + i + '.jpg';
+       }
+     }
+   </script>
+   ```
 
    Avant de l'essayer, d'après vous :
 
@@ -120,16 +121,16 @@ Dans ce TD1, vous commencez à coder en JavaScript, sans cours préalable. Pas d
 
 On va maintenant dynamiser la bannière. Pour le moment, l'image est choisie au hasard parmi 6 possibles, lors de la requête initiale, grâce à une variable PHP. Modifiez la bannière en incorporant toutes les images de cette façon :
 
-
-    <div id="banniere">
-      <img id="1" class="img_banniere visible" alt="banniere" src="img/banniere/banniere1.jpg">
-      <img id="2" class="img_banniere cachee" alt="banniere" src="img/banniere/banniere2.jpg">
-      <img id="3" class="img_banniere cachee" alt="banniere" src="img/banniere/banniere3.jpg">
-      <img id="4" class="img_banniere cachee" alt="banniere" src="img/banniere/banniere4.jpg">
-      <img id="5" class="img_banniere cachee" alt="banniere" src="img/banniere/banniere5.jpg">
-      <img id="6" class="img_banniere cachee" alt="banniere" src="img/banniere/banniere6.jpg">
-    </div>
-
+```html
+<div id="banniere">
+  <img id="1" class="img_banniere visible" alt="banniere" src="img/banniere/banniere1.jpg">
+  <img id="2" class="img_banniere cachee" alt="banniere" src="img/banniere/banniere2.jpg">
+  <img id="3" class="img_banniere cachee" alt="banniere" src="img/banniere/banniere3.jpg">
+  <img id="4" class="img_banniere cachee" alt="banniere" src="img/banniere/banniere4.jpg">
+  <img id="5" class="img_banniere cachee" alt="banniere" src="img/banniere/banniere5.jpg">
+  <img id="6" class="img_banniere cachee" alt="banniere" src="img/banniere/banniere6.jpg">
+</div>
+```
 
 Supprimez aussi les dernières lignes PHP en début de fichier.
 
@@ -151,22 +152,23 @@ Vous allez créer deux effets différents de succession d’images.
 
 2. Actualisez votre page. Dans la console, testez votre nouvelle fonction en entrant les instructions suivantes :
 
-
-        let img_ban_1 = document.getElementById('1');
-        cacher(img_ban_1);
+   ```javascript
+   let img_ban_1 = document.getElementById('1');
+   cacher(img_ban_1);
+   ```
 
    Si votre fonction est opérationnelle, l'image de la bannière a dû disparaître...
 
 2. Créez de même une fonction `afficher(im)`, rafraîchissez la page (pour charger le script complété) et testez la nouvelle fonction dans la console.
 
-
-        let img_ban_1 = document.getElementById('1');
-        let img_ban_2 = document.getElementById('2');
-        cacher(img_ban_1);
-        afficher(img_ban_2);
-        cacher(img_ban_2);
-        afficher(img_ban_1);
-
+   ```js
+   let img_ban_1 = document.getElementById('1');
+   let img_ban_2 = document.getElementById('2');
+   cacher(img_ban_1);
+   afficher(img_ban_2);
+   cacher(img_ban_2);
+   afficher(img_ban_1);
+   ```
 
 3. Créez ensuite une fonction `suivant(n)` qui retourne l’entier suivant n (au sens 1=>2, 2=>3, 3=>4, 4=>5, 5=>6 et 6=>1). En effet, il y a 6 images de bannières et on va passer d’une bannière à la suivante de façon naturelle sauf si on est à la sixième auquel cas on revient à la première.
 
@@ -183,41 +185,46 @@ Vous allez créer deux effets différents de succession d’images.
 
    Dans le cas présent on pourra utiliser l’instruction
 
-   `let tab = document.getElementsByClassName('visible');`
+   ```javascript
+   let tab = document.getElementsByClassName('visible');
+   ````
 
-   Remarque : vous pouvez lancer cette instruction dans la console de l’explorateur de document. Vous aurez alors en direct le tableau résultat de cette commande, affecté dans une variable nommée ici `tab`.
+   **Remarque :** vous pouvez lancer cette instruction dans la console de l’explorateur de document. Vous aurez alors en direct le tableau résultat de cette commande, affecté dans une variable nommée ici `tab`.
 
    En affichant `tab` (tab puis Entrée dans la console) vous aurez le résultat. Comme attendu, `tab` n’a qu’un seul élément, qui est accessible par `tab[0]`. Essayez dans la console.
 
    Dans le codage de la fonction `change_banniere_v1`, vous avez donc maintenant les moyens de récupérer la bannière visible, puis son `id`, puis … Just do it.
    Une fois que c’est fait, testez dans la console votre fonction en lançant l’instruction `change_banniere_v1();` (sans oublier les parenthèses).
 
-
-   **ATTENTION :** JavaScript peut avoir un comportement surprenant.
+   **Attention :** JavaScript peut avoir un comportement surprenant.
    Par exemple, l’opération `"3" + 1` donne `"31"`.  Ne soyez donc pas étonné si `suivant("3")` retourne `"31"`.
    Par contre, `3 + 1` donne bien `4`. Il peut donc être utile de transformer une chaîne de caractères (l’identifiant de la bannière) en nombre. Pour cela, vous pouvez convertir une chaîne de caractères en nombre à l'aide de la fonction `Number(x)` (par exemple `Number("3") + 1` donne bien `4`).
 
 
 5. Pour que la bannière soit mise à jour automatiquement et à intervalles réguliers, et non pas à la main comme à la question précédente, ajoutez en fin de script (hors des fonctions) l’instruction
 
-   `let chb = setInterval(change_banniere_v1,6000);`
+   ```js
+   let chb = setInterval(change_banniere_v1,6000);
+   ```
 
    Ceci permet de créer une variable `chb` de type **timer**. Réactualisez la page. L’instruction précédente lance en boucle la fonction `change_banniere_v1` à intervalles réguliers de 6000 ms.
 
 6. Récupérez l’ensemble de votre script, qui commence à être imposant, sauvegardez-le dans un fichier `script_td1.js` du répertoire `public_html/JS/TD/TD1/js` et incorporez dans le html, à la place du script déplacé, la balise suivante, qui permet d’insérer l’ensemble du script :
 
-
-        <script type="text/javascript" src="js/script_td1.js"></script>
-
+   ```html
+   <script type="text/javascript" src="js/script_td1.js"></script>
+   ```
 
    Enlevez aussi l’instruction PHP qui annonce l’appel au serveur. Vous avez compris qu’il n’y avait qu’un seul appel maintenant, et que tout est dynamisé côté client.
 
-   Remarque importante : le chargement du script est bloquant pour le chargement des balises html. Il est donc important que les éléments html soient chargés avant que le script n’agisse. C’est pourquoi ce script est inséré juste avant la balise `</body>`.
+   **Remarque importante :** le chargement du script est bloquant pour le chargement des balises html. Il est donc important que les éléments html soient chargés avant que le script n’agisse. C’est pourquoi ce script est inséré juste avant la balise `</body>`.
 
 
 7. On va maintenant programmer une transition plus douce entre les différentes images de la bannière. Pour cela, c’est très simple : il suffit d’ajouter une transition sur l’opacité quand on passe de la classe cachee à la classe visible et aussi de la classe visible à la classe cachee. Cela se fait par des instructions comme :
 
-   `maBanniere.style.transition = "opacity 3s";`
+   ```js
+   maBanniere.style.transition = "opacity 3s";`
+   ```
 
    Cette instruction JavaScript agit sur le css en écrivant un style « inline » pour la balise, comme vous pouvez le constater par l’inspecteur d’objets.
 
@@ -230,22 +237,22 @@ On peut aussi dynamiser le titre « Galerie de fleurs ». Ainsi, quand on cliq
 
 1. Au même niveau que la variable `chb` (c’est-à-dire avec un statut de variable globale), créez un objet nommé `tabTitres` de la façon suivante :
 
-  ```javascript
-  const tabTitres = {
-    'rose' : 'Galerie de roses',
-    'hortensia': 'Galerie d\’hortensias',
-    'fruitier': 'Galerie de fruitiers',
-    'autre': 'Galerie de fleurs diverses'
-  };
-  ```
+   ```javascript
+   const tabTitres = {
+     'rose' : 'Galerie de roses',
+     'hortensia': 'Galerie d\’hortensias',
+     'fruitier': 'Galerie de fruitiers',
+     'autre': 'Galerie de fleurs diverses'
+   };
+   ```
 
 2. Créez une fonction `adapter_titre(nom)` qui modifie le contenu de la balise `<span>`. Cette fonction utilisera le tableau `tabTitres`. L’appel de cette fonction sera inséré dans la fonction `adapter_galerie`.
 
    **Indications :** on peut modifier le contenu d’une balise comme `<span>` en changeant la valeur de son attribut `innerHTML`, avec une instruction similaire à :
 
-    ```javascript
-    monParagraphe.innerHTML = 'Hello world !';
-    ```
+   ```javascript
+   monParagraphe.innerHTML = 'Hello world !';
+   ```
 
    **Remarque :** il serait plus cohérent que, par défaut, le titre de la galerie soit "Galerie de roses". Vous pouvez le changer dans le html.
 
@@ -267,18 +274,19 @@ La création et la destruction de cette bulle reposent sur trois méthodes inté
 
 1. Voici le code de la fonction `construit_infobulle()` :
 
-        function construit_infobulle() {
-          let info = document.createElement('div');
-          info.innerHTML = "<p>c'est moi la bulle !</p>";
-          info.id = "bulle";
-          info.style.position = "fixed";
-          info.style.top = "100px";
-          info.style.right = "150px";
-          info.style.backgroundColor = "darkblue";
-          info.style.color = "white";
-          document.body.appendChild(info);
-        }
-
+   ```js
+   function construit_infobulle() {
+     let info = document.createElement('div');
+     info.innerHTML = "<p>c'est moi la bulle !</p>";
+     info.id = "bulle";
+     info.style.position = "fixed";
+     info.style.top = "100px";
+     info.style.right = "150px";
+     info.style.backgroundColor = "darkblue";
+     info.style.color = "white";
+     document.body.appendChild(info);
+   }
+   ```
 
    Décrivez ce que fait chaque ligne. Vous creuserez en particulier la première et la dernière ligne. Copiez ce code dans votre fichier `scripts_td1.js`. Lancez dans la console la commande `construit_infobulle();` Observez ce qui se passe par l’inspecteur d’objet.
 
@@ -288,10 +296,12 @@ La création et la destruction de cette bulle reposent sur trois méthodes inté
 
 3. Voici maintenant le code d’une fonction `detruit_bulle` :
 
-        function detruit_infobulle() {
-          let info = document.getElementById('bulle');
-          document.body.removeChild(info);
-        }
+   ```js
+   function detruit_infobulle() {
+     let info = document.getElementById('bulle');
+     document.body.removeChild(info);
+   }
+   ```
 
    Que fait chaque ligne ?
 
