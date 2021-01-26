@@ -114,24 +114,24 @@ Dans ce TD1, vous commencez à coder en JavaScript, sans cours préalable. Pas d
     Corrigez le script pour que les attributs `alt` soient construits comme ceux des roses : "hortensia1", "fruitier2" etc. Vérifiez le bon fonctionnement du script puis redonnez leur nom d’origine aux images modifiées.
 
 
-## EXERCICE 3 - dynamiser la banière
+## EXERCICE 3 - dynamiser la bannière
 
-On va maintenant dynamiser la banière. Pour le moment, l'image est choisie au hasard parmi 6 possibles, lors de la requête initiale, grâce à une variable PHP. Modifiez la banière en incorporant toutes les images de cette façon : 
+On va maintenant dynamiser la bannière. Pour le moment, l'image est choisie au hasard parmi 6 possibles, lors de la requête initiale, grâce à une variable PHP. Modifiez la bannière en incorporant toutes les images de cette façon : 
 
 
-    <div id="baniere">
-      <img id="1" class="img_baniere visible" alt="baniere" src="img/baniere/baniere1.jpg">
-      <img id="2" class="img_baniere cachee" alt="baniere" src="img/baniere/baniere2.jpg">
-      <img id="3" class="img_baniere cachee" alt="baniere" src="img/baniere/baniere3.jpg">
-      <img id="4" class="img_baniere cachee" alt="baniere" src="img/baniere/baniere4.jpg">
-      <img id="5" class="img_baniere cachee" alt="baniere" src="img/baniere/baniere5.jpg">
-      <img id="6" class="img_baniere cachee" alt="baniere" src="img/baniere/baniere6.jpg">
+    <div id="banniere">
+      <img id="1" class="img_banniere visible" alt="banniere" src="img/banniere/banniere1.jpg">
+      <img id="2" class="img_banniere cachee" alt="banniere" src="img/banniere/banniere2.jpg">
+      <img id="3" class="img_banniere cachee" alt="banniere" src="img/banniere/banniere3.jpg">
+      <img id="4" class="img_banniere cachee" alt="banniere" src="img/banniere/banniere4.jpg">
+      <img id="5" class="img_banniere cachee" alt="banniere" src="img/banniere/banniere5.jpg">
+      <img id="6" class="img_banniere cachee" alt="banniere" src="img/banniere/banniere6.jpg">
     </div>
 
 
 Supprimez aussi les dernières lignes PHP en début de fichier. 
 
-La nouvelle structure html de la banière montre qu’il y a 6 images, dont une de classe « visible » et 5 de classe « cachee ».
+La nouvelle structure html de la bannière montre qu’il y a 6 images, dont une de classe « visible » et 5 de classe « cachee ».
 
 Derrière ces deux classes il y a une valeur différente de l’opacité de l’image (0 pour cachée et 1 pour visible, voir le css). Ces images sont superposées.
 
@@ -153,7 +153,7 @@ Vous allez créer deux effets différents de succession d’images.
         let img_ban_1 = document.getElementById('1');
         cacher(img_ban_1);
 
-   Si votre fonction est opérationnelle, l'image de la banière a dû disparaître...
+   Si votre fonction est opérationnelle, l'image de la bannière a dû disparaître...
 
 2. Créez de même une fonction `afficher(im)`, rafraîchissez la page (pour charger le script complété) et testez la nouvelle fonction dans la console.
 
@@ -166,16 +166,16 @@ Vous allez créer deux effets différents de succession d’images.
         afficher(img_ban_1);
 
 
-3. Créez ensuite une fonction `suivant(n)` qui retourne l’entier suivant n (au sens 1=>2, 2=>3, 3=>4, 4=>5, 5=>6 et 6=>1). En effet, il y a 6 images de banières et on va passer d’une banière à la suivante de façon naturelle sauf si on est à la sixième auquel cas on revient à la première.
+3. Créez ensuite une fonction `suivant(n)` qui retourne l’entier suivant n (au sens 1=>2, 2=>3, 3=>4, 4=>5, 5=>6 et 6=>1). En effet, il y a 6 images de bannières et on va passer d’une bannière à la suivante de façon naturelle sauf si on est à la sixième auquel cas on revient à la première.
 
-4. On va maintenant créer une fonction `change_baniere_v1()` qui :
-    - récupère la banière visible ;
-    - récupère l’`id` de cette banière ;
+4. On va maintenant créer une fonction `change_banniere_v1()` qui :
+    - récupère la bannière visible ;
+    - récupère l’`id` de cette bannière ;
     - calcule le suivant de cet `id` ;
-    - cache la banière actuellement visible ;
-    - affiche la banière suivante.
+    - cache la bannière actuellement visible ;
+    - affiche la bannière suivante.
 
-   Pour récupérer la banière visible (qui n’est pas forcément la banière n°1, même si au chargement de la page, c’est le cas), on va se servir non pas de l’identifiant, mais du fait que la banière visible est LA SEULE banière qui a la classe visible. Or JavaScript permet de récupérer, sous forme de tableau, les éléments html de la page qui sont munis d’une certaine classe.
+   Pour récupérer la bannière visible (qui n’est pas forcément la bannière n°1, même si au chargement de la page, c’est le cas), on va se servir non pas de l’identifiant, mais du fait que la bannière visible est LA SEULE bannière qui a la classe visible. Or JavaScript permet de récupérer, sous forme de tableau, les éléments html de la page qui sont munis d’une certaine classe.
 
    Cela se fait par la méthode `document.getElementsByClassName` qui gère un argument chaîne de caractères.
 
@@ -187,27 +187,25 @@ Vous allez créer deux effets différents de succession d’images.
 
    En affichant `tab` (tab puis Entrée dans la console) vous aurez le résultat. Comme attendu, `tab` n’a qu’un seul élément, qui est accessible par `tab[0]`. Essayez dans la console.
 
-   Dans le codage de la fonction `change_baniere_v1`, vous avez donc maintenant les moyens de récupérer la banière visible, puis son `id`, puis … Just do it. 
-   Une fois que c’est fait, testez dans la console votre fonction en lançant l’instruction `change_baniere_v1();` (sans oublier les parenthèses).
+   Dans le codage de la fonction `change_banniere_v1`, vous avez donc maintenant les moyens de récupérer la bannière visible, puis son `id`, puis … Just do it. 
+   Une fois que c’est fait, testez dans la console votre fonction en lançant l’instruction `change_banniere_v1();` (sans oublier les parenthèses).
 
 
-   **ATTENTION : JavaScript peut avoir un comportement surprenant. 
+   **ATTENTION :** JavaScript peut avoir un comportement surprenant. 
    Par exemple, l’opération `"3" + 1` donne `"31"`.  Ne soyez donc pas étonné si `suivant("3")` retourne `"31"`. 
-   Par contre, `3 + 1` donne bien `4`. Il peut donc être utile de transformer une chaîne de caractères (l’identifiant de la banière) en nombre. Pour cela, une multiplication par `1` fera l’affaire. 
-   Par exemple, `"3"*1 + 1` donne `4` car `"3"*1` est interprété en `3*1`.**
+   Par contre, `3 + 1` donne bien `4`. Il peut donc être utile de transformer une chaîne de caractères (l’identifiant de la bannière) en nombre. Pour cela, vous pouvez convertir une chaîne de caractères en nombre à l'aide de la fonction `Number(x)` (par exemple `Number("3") + 1` donne bien `4`).
 
 
+5. Pour que la bannière soit mise à jour automatiquement et à intervalles réguliers, et non pas à la main comme à la question précédente, ajoutez en fin de script (hors des fonctions) l’instruction 
 
-5. Pour que la banière soit mise à jour automatiquement et à intervalles réguliers, et non pas à la main comme à la question précédente, ajoutez en fin de script (hors des fonctions) l’instruction 
+   `let chb = setInterval(change_banniere_v1,6000);`
 
-   `let chb = setInterval(change_baniere_v1,6000);`
+   Ceci permet de créer une variable `chb` de type **timer**. Réactualisez la page. L’instruction précédente lance en boucle la fonction `change_banniere_v1` à intervalles réguliers de 6000 ms.
 
-   Ceci permet de créer une variable `chb` de type **timer**. Réactualisez la page. L’instruction précédente lance en boucle la fonction `change_baniere_v1` à intervalles réguliers de 6000 ms.
-
-6. Récupérez l’ensemble de votre script, qui commence à être imposant, sauvegardez-le dans un fichier `scripts_td1.js` du répertoire `public_html/JS/TD/TD1/js` et incorporez dans le html, à la place du script déplacé, la balise suivante, qui permet d’insérer l’ensemble du script :
+6. Récupérez l’ensemble de votre script, qui commence à être imposant, sauvegardez-le dans un fichier `script_td1.js` du répertoire `public_html/JS/TD/TD1/js` et incorporez dans le html, à la place du script déplacé, la balise suivante, qui permet d’insérer l’ensemble du script :
 
 
-        <script type="text/javascript" src="js/scripts_td1.js"></script>
+        <script type="text/javascript" src="js/script_td1.js"></script>
 
 
    Enlevez aussi l’instruction PHP qui annonce l’appel au serveur. Vous avez compris qu’il n’y avait qu’un seul appel maintenant, et que tout est dynamisé côté client.
@@ -215,13 +213,13 @@ Vous allez créer deux effets différents de succession d’images.
    Remarque importante : le chargement du script est bloquant pour le chargement des balises html. Il est donc important que les éléments html soient chargés avant que le script n’agisse. C’est pourquoi ce script est inséré juste avant la balise `</body>`.
 
 
-7. On va maintenant programmer une transition plus douce entre les différentes images de la banière. Pour cela, c’est très simple : il suffit d’ajouter une transition sur l’opacité quand on passe de la classe cachee à la classe visible et aussi de la classe visible à la classe cachee. Cela se fait par des instructions comme :
+7. On va maintenant programmer une transition plus douce entre les différentes images de la bannière. Pour cela, c’est très simple : il suffit d’ajouter une transition sur l’opacité quand on passe de la classe cachee à la classe visible et aussi de la classe visible à la classe cachee. Cela se fait par des instructions comme :
 
-   `maBaniere.style.transition = "opacity 3s";`
+   `maBanniere.style.transition = "opacity 3s";`
 
    Cette instruction JavaScript agit sur le css en écrivant un style « inline » pour la balise, comme vous pouvez le constater par l’inspecteur d’objets.
 
-   Créez une fonction `change_baniere_v2` (sur la même base que `change_baniere_v1`) qui réalisera cette nouvelle transition, et que vous utiliserez à la place de `change_baniere_v1` dans le `setInterval`.
+   Créez une fonction `change_banniere_v2` (sur la même base que `change_banniere_v1`) qui réalisera cette nouvelle transition, et que vous utiliserez à la place de `change_banniere_v1` dans le `setInterval`.
 
 
 ## EXERCICE 4 - dynamiser le titre de la galerie
@@ -241,7 +239,7 @@ On peut aussi dynamiser le titre « Galerie de fleurs ». Ainsi, quand on cliq
 
 
 
-2. Créez une fonction `adapter_titre(nom)` qui modifie le contenu de la balise `<span>`. Cette fonction utilisera le tableau `tabTitres`. L’appel de cette fonction sera inséré dans la fonction `adapter_galerie`. .
+2. Créez une fonction `adapter_titre(nom)` qui modifie le contenu de la balise `<span>`. Cette fonction utilisera le tableau `tabTitres`. L’appel de cette fonction sera inséré dans la fonction `adapter_galerie`.
 
    Indications : on peut modifier le contenu d’une balise comme `<span>` en changeant la valeur de son attribut `innerHTML`, avec une instruction similaire à :
 
@@ -249,13 +247,13 @@ On peut aussi dynamiser le titre « Galerie de fleurs ». Ainsi, quand on cliq
 
    Remarque : il serait plus cohérent que, par défaut, le titre de la galerie soit "Galerie de roses". Vous pouvez le changer dans le html.
 
-## EXERCICE 5 - compléments pour la banière
+## EXERCICE 5 - compléments pour la bannière
 
-1. On peut annuler le défilement de la banière par une instruction `clearInterval(chb);`. Testez cette instruction dans la console.
+1. On peut annuler le défilement de la bannière par une instruction `clearInterval(chb);`. Testez cette instruction dans la console.
 
-2. Comme `chb` est une variable « globale », on peut l’évoquer dans le corps d’une fonction. Créez une fonction `stopper_defilement` qui annulera le défilement de la banière, et programmez le lancement de cette fonction au clic sur la banière (attribut `onclick`). Vous pourrez vous inspirer des attributs `onclick` des items du menu.
+2. Comme `chb` est une variable « globale », on peut l’évoquer dans le corps d’une fonction. Créez une fonction `stopper_defilement` qui annulera le défilement de la bannière, et programmez le lancement de cette fonction au clic sur la bannière (attribut `onclick`). Vous pourrez vous inspirer des attributs `onclick` des items du menu.
 
-3. Créez une fonction `lancer_defilement` qui attribue à `chb` la valeur `setInterval(change_baniere_v2,6000)`. Programmer la réactivation du défilement de la banière quand on double-clique dessus (associé à l’attribut `ondblclick`).
+3. Créez une fonction `lancer_defilement` qui attribue à `chb` la valeur `setInterval(change_banniere_v2,6000)`. Programmer la réactivation du défilement de la bannière quand on double-clique dessus (associé à l’attribut `ondblclick`).
 
 
 ## EXERCICE 6 - création d'une info-bulle
