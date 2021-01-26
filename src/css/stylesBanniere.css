@@ -2,11 +2,11 @@
 /* styles banière */
 /******************/
 
-#baniere {
+#banniere {
   min-height: 200px;
 }
 
-.img_baniere {
+.img_banniere {
   width: 900px;
   height: 200px;
   position:absolute;

@@ -1,5 +1,5 @@
 <?php
-  $num_baniere = rand(1,6);
+  $num_banniere = rand(1,6);
   $fleur = isset($_GET['fleur']) ? $_GET['fleur'] : "rose";
   /*  remarque PHP : la structure "ternaire" ci-dessus
       est exactement équivalente au code suivant :
@@ -17,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="img/icones/fleur.ico" rel="icon" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="css/stylesDivers.css">
-    <link rel="stylesheet" type="text/css" href="css/stylesBaniere.css">
+    <link rel="stylesheet" type="text/css" href="css/stylesBanniere.css">
     <link rel="stylesheet" type="text/css" href="css/stylesMenu.css">
     <link rel="stylesheet" type="text/css" href="css/stylesGalerie.css">
     <title>Galeries de fleurs</title>
@@ -27,8 +27,8 @@
     <div id="page">
       <img id="parametres" src="img/divers/parametres.png">
       <header>
-        <div id="baniere">
-            <img id="1" class="img_baniere visible" alt="baniere" src="img/baniere/baniere<?php echo $num_baniere; ?>.jpg">
+        <div id="banniere">
+            <img id="1" class="img_banniere visible" alt="banniere" src="img/banniere/banniere<?php echo $num_banniere; ?>.jpg">
         </div>
         <nav>
           <ul>
