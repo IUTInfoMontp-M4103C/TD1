@@ -11,7 +11,7 @@ https://classroom.github.com/a/3S6hMQt6
 
 <!-- La version [PDF](ressources/td1.pdf) du TD. -->
 
-## INTRODUCTION
+## Introduction
 
 Vos TD et projets de S1 (Conception Doc) vous ont appris à créer des sites web statiques, où les pages ne varient pas. Leur seul aspect "dynamique" était apporté par le css qui permettait des effets (media queries, transitions, etc).
 
@@ -23,13 +23,11 @@ JavaScript permet de rendre dynamique une page web par l’utilisation de script
 
 Dans certains cas, il peut être excessif de faire des appels permanents au serveur. En effet, une requête HTTP, génération de page PHP puis réponse HTTP prend du temps et des ressources informatiques, alors il est toujours mieux de s'en passer. Dans ce TD1 vous allez devoir modifier une page web qui pour le moment est en partie remplie via PHP, par des appels exagérés au serveur web.
 
-**TODO À changer**
-
 Créez dans votre `public_html` un dossier `JS/TD`. C'est ce dossier qui accueillera le dépôt local en lien avec votre fork du TD1. Il est nécessaire que ce dépôt local soit dans votre `public_html` car le fichier `index.php` aura besoin d'un serveur web qui produira la page web bien construite.
 
-Dans ce TD1, vous commencez à coder en JavaScript, sans cours préalable. Pas d’inquiétude, vous avez déjà un passé de prog objet, et même s’il faut se méfier de pas mal de choses intuitives avec ce langage, cela ne vous empêchera pas de faire vos premiers pas en JavaScript !
+<!-- Dans ce TD1, vous commencez à coder en JavaScript, sans cours préalable. Pas d’inquiétude, vous avez déjà un passé de prog objet, et même s’il faut se méfier de pas mal de choses intuitives avec ce langage, cela ne vous empêchera pas de faire vos premiers pas en JavaScript ! -->
 
-## EXERCICE 1 - mécanisme client serveur
+## Exercice 1 - mécanisme client serveur
 
 1. Appelez la page **index.php?fleur=rose** et expliquez le rôle de chaque instruction PHP de cette page (lignes 1 à 12, lignes 26 et 30, lignes 48 à 55).
 
@@ -39,7 +37,7 @@ Dans ce TD1, vous commencez à coder en JavaScript, sans cours préalable. Pas d
 
 2. En cliquant sur un des 4 items du menu, on fait une requête http au serveur, en lui passant en GET une valeur de fleur. Expliquez ce qui est actualisé sur la page quand on clique sur un item du menu.
 
-## EXERCICE 2 - dynamiser le menu
+## Exercice 2 - dynamiser le menu
 
 1. Excluez tous les appels au serveur dans les liens du menu en remplaçant les `href="index.php?fleur=…"` par des `href="#"`. Vérifiez que le menu n’agit plus (ne lance plus de requête http).
 
@@ -117,7 +115,7 @@ Dans ce TD1, vous commencez à coder en JavaScript, sans cours préalable. Pas d
     Corrigez le script pour que les attributs `alt` soient construits comme ceux des roses : "hortensia1", "fruitier2" etc. Vérifiez le bon fonctionnement du script puis redonnez leur nom d’origine aux images modifiées.
 
 
-## EXERCICE 3 - dynamiser la bannière
+## Exercice 3 - dynamiser la bannière
 
 On va maintenant dynamiser la bannière. Pour le moment, l'image est choisie au hasard parmi 6 possibles, lors de la requête initiale, grâce à une variable PHP. Modifiez la bannière en incorporant toutes les images de cette façon :
 
@@ -231,7 +229,7 @@ Vous allez créer deux effets différents de succession d’images.
    Créez une fonction `change_banniere_v2` (sur la même base que `change_banniere_v1`) qui réalisera cette nouvelle transition, et que vous utiliserez à la place de `change_banniere_v1` dans le `setInterval`.
 
 
-## EXERCICE 4 - dynamiser le titre de la galerie
+## Exercice 4 - dynamiser le titre de la galerie
 
 On peut aussi dynamiser le titre « Galerie de fleurs ». Ainsi, quand on cliquera sur l’item **hortensia** du menu, le titre sera mis à jour en « **Galerie d’hortensias** » et de même pour les autres items.
 
@@ -246,6 +244,9 @@ On peut aussi dynamiser le titre « Galerie de fleurs ». Ainsi, quand on cliq
    };
    ```
 
+   *Rappel :* Comme nous avons vu dans le cours 1, le mot-clé `const` déclare une variable comme `let` mais en interdisant d'être réaffecté plus tard. Avantage : cela évite de le réaffecter par erreur.
+
+
 2. Créez une fonction `adapter_titre(nom)` qui modifie le contenu de la balise `<span>`. Cette fonction utilisera le tableau `tabTitres`. L’appel de cette fonction sera inséré dans la fonction `adapter_galerie`.
 
    **Indications :** on peut modifier le contenu d’une balise comme `<span>` en changeant la valeur de son attribut `innerHTML`, avec une instruction similaire à :
@@ -256,7 +257,7 @@ On peut aussi dynamiser le titre « Galerie de fleurs ». Ainsi, quand on cliq
 
    **Remarque :** il serait plus cohérent que, par défaut, le titre de la galerie soit "Galerie de roses". Vous pouvez le changer dans le html.
 
-## EXERCICE 5 - compléments pour la bannière
+## Exercice 5 - compléments pour la bannière
 
 1. On peut annuler le défilement de la bannière par une instruction `clearInterval(chb);`. Testez cette instruction dans la console.
 
@@ -265,7 +266,7 @@ On peut aussi dynamiser le titre « Galerie de fleurs ». Ainsi, quand on cliq
 3. Créez une fonction `lancer_defilement` qui attribue à `chb` la valeur `setInterval(change_banniere_v2,6000)`. Programmer la réactivation du défilement de la bannière quand on double-clique dessus (associé à l’attribut `ondblclick`).
 
 
-## EXERCICE 6 - création d'une info-bulle
+## Exercice 6 - création d'une info-bulle
 
 Vous devez maintenant créer une info-bulle toute simple qui apparaît au survol du **footer** et disparaît après ce survol.
 
@@ -310,7 +311,7 @@ La création et la destruction de cette bulle reposent sur trois méthodes inté
 4. On peut renseigner d’autres attributs que `onclick` ou `ondblclick`. Par exemple, les attributs `onmouseover` et `onmouseout` existent aussi. Soyez malin et faites en sorte que l’info-bulle apparaisse au survol du **footer** et disparaisse à la fin de ce survol.
 
 
-## EXERCICE 7 - Et pour quelques minutes de plus...
+## Exercice 7 - Et pour quelques minutes de plus...
 
 1. Renseignez l'attribut `onclick` de la balise `<img id="parametres"...>` pour permettre le lancement, au clic, de l'instruction `changer_parametres()` correspondant à une fonction que vous allez écrire.
 
