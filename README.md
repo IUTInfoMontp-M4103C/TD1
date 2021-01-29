@@ -89,7 +89,7 @@ Créez dans votre `public_html` un dossier `JS/TD`. C'est ce dossier qui accueil
    <script type="text/javascript">
      function adapterGalerie(nom) {
        for(let i = 1; i <= 6; i++) {
-         let image = document.getElementById('fleur' + i);
+         const image = document.getElementById('fleur' + i);
          image.src = 'img/fleurs/' + nom + '/' + nom + i + '.jpg';
        }
      }
@@ -151,7 +151,7 @@ Vous allez créer deux effets différents de succession d’images.
 2. Actualisez votre page. Dans la console, testez votre nouvelle fonction en entrant les instructions suivantes :
 
    ```javascript
-   let imgBan1 = document.getElementById('1');
+   const imgBan1 = document.getElementById('1');
    cacher(imgBan1);
    ```
 
@@ -160,8 +160,8 @@ Vous allez créer deux effets différents de succession d’images.
 2. Créez de même une fonction `afficher(im)`, rafraîchissez la page (pour charger le script complété) et testez la nouvelle fonction dans la console.
 
    ```js
-   let imgBan1 = document.getElementById('1');
-   let imgBan2 = document.getElementById('2');
+   const imgBan1 = document.getElementById('1');
+   const imgBan2 = document.getElementById('2');
    cacher(imgBan1);
    afficher(imgBan2);
    cacher(imgBan2);
@@ -184,7 +184,7 @@ Vous allez créer deux effets différents de succession d’images.
    Dans le cas présent on pourra utiliser l’instruction
 
    ```javascript
-   let tab = document.getElementsByClassName('visible');
+   const tab = document.getElementsByClassName('visible');
    ````
 
    **Remarque :** vous pouvez lancer cette instruction dans la console de l’explorateur de document. Vous aurez alors en direct le tableau résultat de cette commande, affecté dans une variable nommée ici `tab`.
@@ -277,7 +277,7 @@ La création et la destruction de cette bulle reposent sur trois méthodes inté
 
    ```js
    function construitInfobulle() {
-     let info = document.createElement('div');
+     const info = document.createElement('div');
      info.innerHTML = "<p>c'est moi la bulle !</p>";
      info.id = "bulle";
      info.style.position = "fixed";
@@ -299,7 +299,7 @@ La création et la destruction de cette bulle reposent sur trois méthodes inté
 
    ```js
    function detruitInfobulle() {
-     let info = document.getElementById('bulle');
+     const info = document.getElementById('bulle');
      document.body.removeChild(info);
    }
    ```
