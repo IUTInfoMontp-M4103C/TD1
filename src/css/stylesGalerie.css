@@ -9,7 +9,7 @@
   align-items: center;
 }
 
-.ligne_galerie {
+.ligne-galerie {
   margin:5px auto ;
   display:flex;
   flex-direction: row;
@@ -17,7 +17,7 @@
   align-items: center;
 }
 
-.img_galerie {
+.img-galerie {
   max-width: 30%;
   margin-top:5px;
   padding: 4px;

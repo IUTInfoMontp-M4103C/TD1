@@ -28,7 +28,7 @@
       <img id="parametres" src="img/divers/parametres.png">
       <header>
         <div id="banniere">
-            <img id="1" class="img_banniere visible" alt="banniere" src="img/banniere/banniere<?php echo $num_banniere; ?>.jpg">
+            <img id="1" class="img-banniere visible" alt="banniere" src="img/banniere/banniere<?php echo $num_banniere; ?>.jpg">
         </div>
         <nav>
           <ul>
@@ -44,15 +44,15 @@
           <h1><span id="titre">Galerie de fleurs</span></h1>
         </div>
         <div class='galerie'>
-          <div class='ligne_galerie'>
-            <img id='fleur1' class='img_galerie' alt='<?php echo $fleur; ?>1' title='<?php echo $fleur; ?>' src='img/fleurs/<?php echo $fleur; ?>/<?php echo $fleur; ?>1.jpg'>
-            <img id='fleur2' class='img_galerie' alt='<?php echo $fleur; ?>2' title='<?php echo $fleur; ?>' src='img/fleurs/<?php echo $fleur; ?>/<?php echo $fleur; ?>2.jpg'>
-            <img id='fleur3' class='img_galerie' alt='<?php echo $fleur; ?>3' title='<?php echo $fleur; ?>' src='img/fleurs/<?php echo $fleur; ?>/<?php echo $fleur; ?>3.jpg'>
+          <div class='ligne-galerie'>
+            <img id='fleur1' class='img-galerie' alt='<?php echo $fleur; ?>1' title='<?php echo $fleur; ?>' src='img/fleurs/<?php echo $fleur; ?>/<?php echo $fleur; ?>1.jpg'>
+            <img id='fleur2' class='img-galerie' alt='<?php echo $fleur; ?>2' title='<?php echo $fleur; ?>' src='img/fleurs/<?php echo $fleur; ?>/<?php echo $fleur; ?>2.jpg'>
+            <img id='fleur3' class='img-galerie' alt='<?php echo $fleur; ?>3' title='<?php echo $fleur; ?>' src='img/fleurs/<?php echo $fleur; ?>/<?php echo $fleur; ?>3.jpg'>
           </div>
-          <div class='ligne_galerie'>
-            <img id='fleur4' class='img_galerie' alt='<?php echo $fleur; ?>4' title='<?php echo $fleur; ?>' src='img/fleurs/<?php echo $fleur; ?>/<?php echo $fleur; ?>4.jpg'>
-            <img id='fleur5' class='img_galerie' alt='<?php echo $fleur; ?>5' title='<?php echo $fleur; ?>' src='img/fleurs/<?php echo $fleur; ?>/<?php echo $fleur; ?>5.jpg'>
-            <img id='fleur6' class='img_galerie' alt='<?php echo $fleur; ?>6' title='<?php echo $fleur; ?>' src='img/fleurs/<?php echo $fleur; ?>/<?php echo $fleur; ?>6.jpg'>
+          <div class='ligne-galerie'>
+            <img id='fleur4' class='img-galerie' alt='<?php echo $fleur; ?>4' title='<?php echo $fleur; ?>' src='img/fleurs/<?php echo $fleur; ?>/<?php echo $fleur; ?>4.jpg'>
+            <img id='fleur5' class='img-galerie' alt='<?php echo $fleur; ?>5' title='<?php echo $fleur; ?>' src='img/fleurs/<?php echo $fleur; ?>/<?php echo $fleur; ?>5.jpg'>
+            <img id='fleur6' class='img-galerie' alt='<?php echo $fleur; ?>6' title='<?php echo $fleur; ?>' src='img/fleurs/<?php echo $fleur; ?>/<?php echo $fleur; ?>6.jpg'>
           </div>
         </div>
       </main>

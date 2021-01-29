@@ -13,7 +13,7 @@ https://classroom.github.com/a/3S6hMQt6
 
 ## Introduction
 
-Vos TD et projets de S1 (Conception Doc) vous ont appris à créer des sites web statiques, où les pages ne varient pas. Leur seul aspect "dynamique" était apporté par le css qui permettait des effets (media queries, transitions, etc).
+Vos TD et projets de S1 (Conception Doc) vous ont appris à créer des sites web statiques, où les pages ne varient pas. Leur seul aspect "dynamique" était apporté par le css qui permettait des effets (_media queries_, transitions, etc).
 
 En S3 vous avez appris à réellement dynamiser vos sites web en utilisant des appels au serveur web, avec des pages web construites par le serveur, en fonction de données recueillies sur la base de données ou par le biais de formulaires, et au moyen du langage PHP.
 
@@ -52,17 +52,17 @@ Créez dans votre `public_html` un dossier `JS/TD`. C'est ce dossier qui accueil
    ```html
    <nav>
      <ul>
-       <li><a href="#" onclick="adapter_galerie('rose');">rose</a></li>
-       <li><a href="#" onclick="adapter_galerie('hortensia');">hortensia</a></li>
-       <li><a href="#" onclick="adapter_galerie('fruitier');">fruitier</a></li>
-       <li><a href="#" onclick="adapter_galerie('autre');">autre</a></li>
+       <li><a href="#" onclick="adapterGalerie('rose');">rose</a></li>
+       <li><a href="#" onclick="adapterGalerie('hortensia');">hortensia</a></li>
+       <li><a href="#" onclick="adapterGalerie('fruitier');">fruitier</a></li>
+       <li><a href="#" onclick="adapterGalerie('autre');">autre</a></li>
      </ul>
    </nav>
    ```
 
 6. Ouvrez l’examinateur d’élément, menu « console » (F12), rafraîchissez la page, cliquez sur un item du menu et expliquez le message d’erreur qui apparaît.
 
-   L’attribut `onclick` des balises `<a>` a pour valeur une chaîne   de caractères qui évoque l’exécution d’une fonction `adapter_galerie` avec un paramètre propre à chaque balise `<a>`.
+   L’attribut `onclick` des balises `<a>` a pour valeur une chaîne   de caractères qui évoque l’exécution d’une fonction `adapterGalerie` avec un paramètre propre à chaque balise `<a>`.
 
    Cet attribut `onclick` permet un appel à un script JavaScript quand le lien est cliqué.
 
@@ -70,7 +70,7 @@ Créez dans votre `public_html` un dossier `JS/TD`. C'est ce dossier qui accueil
 
    ```html
    <script type="text/javascript">
-       function adapter_galerie(nom) {
+       function adapterGalerie(nom) {
            // à compléter
        }
    </script>
@@ -87,7 +87,7 @@ Créez dans votre `public_html` un dossier `JS/TD`. C'est ce dossier qui accueil
 
    ```html
    <script type="text/javascript">
-     function adapter_galerie(nom) {
+     function adapterGalerie(nom) {
        for(let i = 1; i <= 6; i++) {
          let image = document.getElementById('fleur' + i);
          image.src = 'img/fleurs/' + nom + '/' + nom + i + '.jpg';
@@ -102,11 +102,11 @@ Créez dans votre `public_html` un dossier `JS/TD`. C'est ce dossier qui accueil
 
    + Que fait `image.src = …` ?
 
-   Copiez le nouveau code de `adapter_galerie`, puis vérifiez vos  réponses par l’inspecteur d’éléments après les clics sur les  items du menu.
+   Copiez le nouveau code de `adapterGalerie`, puis vérifiez vos  réponses par l’inspecteur d’éléments après les clics sur les  items du menu.
 
    Vous prendrez le temps d'inspecter les images et de constater que les attributs `src` ont été adaptés.
 
-10. Au survol d’une image de fleur, un titre s’affiche, car l’attribut `title` a été renseigné. Mais si on passe des roses à une autre catégorie de fleurs, on voit que le script n’a pas actualisé ce `title`. Corrigez le script en complétant la fonction `adapter_galerie` (inspirez-vous de la commande `image.src = …`) et vérifiez que le `title` est devenu dynamique.
+10. Au survol d’une image de fleur, un titre s’affiche, car l’attribut `title` a été renseigné. Mais si on passe des roses à une autre catégorie de fleurs, on voit que le script n’a pas actualisé ce `title`. Corrigez le script en complétant la fonction `adapterGalerie` (inspirez-vous de la commande `image.src = …`) et vérifiez que le `title` est devenu dynamique.
 
 11. Si une image n’est pas trouvée par le serveur, l’attribut `alt` joue son rôle et affiche un texte de remplacement à l’image. Vérifiez ce rôle en changeant le nom de certains fichiers images (par exemple renommez l'image `rose1.jpg` en `roseUn.jpg`) et réactualisez la page (`CTRL` `F5` par exemple)
 
@@ -121,12 +121,12 @@ On va maintenant dynamiser la bannière. Pour le moment, l'image est choisie au 
 
 ```html
 <div id="banniere">
-  <img id="1" class="img_banniere visible" alt="banniere" src="img/banniere/banniere1.jpg">
-  <img id="2" class="img_banniere cachee" alt="banniere" src="img/banniere/banniere2.jpg">
-  <img id="3" class="img_banniere cachee" alt="banniere" src="img/banniere/banniere3.jpg">
-  <img id="4" class="img_banniere cachee" alt="banniere" src="img/banniere/banniere4.jpg">
-  <img id="5" class="img_banniere cachee" alt="banniere" src="img/banniere/banniere5.jpg">
-  <img id="6" class="img_banniere cachee" alt="banniere" src="img/banniere/banniere6.jpg">
+  <img id="1" class="img-banniere visible" alt="banniere" src="img/banniere/banniere1.jpg">
+  <img id="2" class="img-banniere cachee" alt="banniere" src="img/banniere/banniere2.jpg">
+  <img id="3" class="img-banniere cachee" alt="banniere" src="img/banniere/banniere3.jpg">
+  <img id="4" class="img-banniere cachee" alt="banniere" src="img/banniere/banniere4.jpg">
+  <img id="5" class="img-banniere cachee" alt="banniere" src="img/banniere/banniere5.jpg">
+  <img id="6" class="img-banniere cachee" alt="banniere" src="img/banniere/banniere6.jpg">
 </div>
 ```
 
@@ -138,7 +138,7 @@ Derrière ces deux classes il y a une valeur différente de l’opacité de l’
 
 Vous allez créer deux effets différents de succession d’images.
 
-1. Créez, dans la partie `<script>`, après le code de `adapter_galerie(nom)`, une fonction `cacher(im)` qui cache l’image `im` passée en paramètre. Pour cela vous pourrez :
+1. Créez, dans la partie `<script>`, après le code de `adapterGalerie(nom)`, une fonction `cacher(im)` qui cache l’image `im` passée en paramètre. Pour cela vous pourrez :
     - retirer la classe `visible` à l’image `im`
     - ajouter la classe `cachee` à l’image `im`
 
@@ -151,8 +151,8 @@ Vous allez créer deux effets différents de succession d’images.
 2. Actualisez votre page. Dans la console, testez votre nouvelle fonction en entrant les instructions suivantes :
 
    ```javascript
-   let img_ban_1 = document.getElementById('1');
-   cacher(img_ban_1);
+   let imgBan1 = document.getElementById('1');
+   cacher(imgBan1);
    ```
 
    Si votre fonction est opérationnelle, l'image de la bannière a dû disparaître...
@@ -160,17 +160,17 @@ Vous allez créer deux effets différents de succession d’images.
 2. Créez de même une fonction `afficher(im)`, rafraîchissez la page (pour charger le script complété) et testez la nouvelle fonction dans la console.
 
    ```js
-   let img_ban_1 = document.getElementById('1');
-   let img_ban_2 = document.getElementById('2');
-   cacher(img_ban_1);
-   afficher(img_ban_2);
-   cacher(img_ban_2);
-   afficher(img_ban_1);
+   let imgBan1 = document.getElementById('1');
+   let imgBan2 = document.getElementById('2');
+   cacher(imgBan1);
+   afficher(imgBan2);
+   cacher(imgBan2);
+   afficher(imgBan1);
    ```
 
 3. Créez ensuite une fonction `suivant(n)` qui retourne l’entier suivant n (au sens 1=>2, 2=>3, 3=>4, 4=>5, 5=>6 et 6=>1). En effet, il y a 6 images de bannières et on va passer d’une bannière à la suivante de façon naturelle sauf si on est à la sixième auquel cas on revient à la première.
 
-4. On va maintenant créer une fonction `change_banniere_v1()` qui :
+4. On va maintenant créer une fonction `changeBanniereV1()` qui :
     - récupère la bannière visible ;
     - récupère l’`id` de cette bannière ;
     - calcule le suivant de cet `id` ;
@@ -191,8 +191,8 @@ Vous allez créer deux effets différents de succession d’images.
 
    En affichant `tab` (tab puis Entrée dans la console) vous aurez le résultat. Comme attendu, `tab` n’a qu’un seul élément, qui est accessible par `tab[0]`. Essayez dans la console.
 
-   Dans le codage de la fonction `change_banniere_v1`, vous avez donc maintenant les moyens de récupérer la bannière visible, puis son `id`, puis … Just do it.
-   Une fois que c’est fait, testez dans la console votre fonction en lançant l’instruction `change_banniere_v1();` (sans oublier les parenthèses).
+   Dans le codage de la fonction `changeBanniereV1`, vous avez donc maintenant les moyens de récupérer la bannière visible, puis son `id`, puis … Just do it.
+   Une fois que c’est fait, testez dans la console votre fonction en lançant l’instruction `changeBanniereV1();` (sans oublier les parenthèses).
 
    **Attention :** JavaScript peut avoir un comportement surprenant.
    Par exemple, l’opération `"3" + 1` donne `"31"`.  Ne soyez donc pas étonné si `suivant("3")` retourne `"31"`.
@@ -202,10 +202,10 @@ Vous allez créer deux effets différents de succession d’images.
 5. Pour que la bannière soit mise à jour automatiquement et à intervalles réguliers, et non pas à la main comme à la question précédente, ajoutez en fin de script (hors des fonctions) l’instruction
 
    ```js
-   let chb = setInterval(change_banniere_v1,6000);
+   let chb = setInterval(changeBanniereV1, 6000);
    ```
 
-   Ceci permet de créer une variable `chb` de type **timer**. Réactualisez la page. L’instruction précédente lance en boucle la fonction `change_banniere_v1` à intervalles réguliers de 6000 ms.
+   Ceci permet de créer une variable `chb` de type **timer**. Réactualisez la page. L’instruction précédente lance en boucle la fonction `changeBanniereV1` à intervalles réguliers de 6000 ms.
 
 6. Récupérez l’ensemble de votre script, qui commence à être imposant, sauvegardez-le dans un fichier `script_td1.js` du répertoire `public_html/JS/TD/TD1/js` et incorporez dans le html, à la place du script déplacé, la balise suivante, qui permet d’insérer l’ensemble du script :
 
@@ -226,7 +226,7 @@ Vous allez créer deux effets différents de succession d’images.
 
    Cette instruction JavaScript agit sur le css en écrivant un style « inline » pour la balise, comme vous pouvez le constater par l’inspecteur d’objets.
 
-   Créez une fonction `change_banniere_v2` (sur la même base que `change_banniere_v1`) qui réalisera cette nouvelle transition, et que vous utiliserez à la place de `change_banniere_v1` dans le `setInterval`.
+   Créez une fonction `changeBanniereV2` (sur la même base que `changeBanniereV1`) qui réalisera cette nouvelle transition, et que vous utiliserez à la place de `changeBanniereV1` dans le `setInterval`.
 
 
 ## Exercice 4 - dynamiser le titre de la galerie
@@ -247,7 +247,7 @@ On peut aussi dynamiser le titre « Galerie de fleurs ». Ainsi, quand on cliq
    *Rappel :* Comme nous avons vu dans le cours 1, le mot-clé `const` déclare une variable comme `let` mais en interdisant d'être réaffecté plus tard. Avantage : cela évite de le réaffecter par erreur.
 
 
-2. Créez une fonction `adapter_titre(nom)` qui modifie le contenu de la balise `<span>`. Cette fonction utilisera le tableau `tabTitres`. L’appel de cette fonction sera inséré dans la fonction `adapter_galerie`.
+2. Créez une fonction `adapterTitre(nom)` qui modifie le contenu de la balise `<span>`. Cette fonction utilisera le tableau `tabTitres`. L’appel de cette fonction sera inséré dans la fonction `adapterGalerie`.
 
    **Indications :** on peut modifier le contenu d’une balise comme `<span>` en changeant la valeur de son attribut `innerHTML`, avec une instruction similaire à :
 
@@ -261,9 +261,9 @@ On peut aussi dynamiser le titre « Galerie de fleurs ». Ainsi, quand on cliq
 
 1. On peut annuler le défilement de la bannière par une instruction `clearInterval(chb);`. Testez cette instruction dans la console.
 
-2. Comme `chb` est une variable « globale », on peut l’évoquer dans le corps d’une fonction. Créez une fonction `stopper_defilement` qui annulera le défilement de la bannière, et programmez le lancement de cette fonction au clic sur la bannière (attribut `onclick`). Vous pourrez vous inspirer des attributs `onclick` des items du menu.
+2. Comme `chb` est une variable « globale », on peut l’évoquer dans le corps d’une fonction. Créez une fonction `stopperDefilement` qui annulera le défilement de la bannière, et programmez le lancement de cette fonction au clic sur la bannière (attribut `onclick`). Vous pourrez vous inspirer des attributs `onclick` des items du menu.
 
-3. Créez une fonction `lancer_defilement` qui attribue à `chb` la valeur `setInterval(change_banniere_v2,6000)`. Programmer la réactivation du défilement de la bannière quand on double-clique dessus (associé à l’attribut `ondblclick`).
+3. Créez une fonction `lancerDefilement` qui attribue à `chb` la valeur `setInterval(changeBanniereV2, 6000)`. Programmer la réactivation du défilement de la bannière quand on double-clique dessus (associé à l’attribut `ondblclick`).
 
 
 ## Exercice 6 - création d'une info-bulle
@@ -273,10 +273,10 @@ Vous devez maintenant créer une info-bulle toute simple qui apparaît au survol
 La création et la destruction de cette bulle reposent sur trois méthodes intéressantes de l’objet `document`. Nous reviendrons sur ces méthodes plus tard dans le cours, mais vous pouvez en avoir un  premier aperçu :
 
 
-1. Voici le code de la fonction `construit_infobulle()` :
+1. Voici le code de la fonction `construitInfobulle()` :
 
    ```js
-   function construit_infobulle() {
+   function construitInfobulle() {
      let info = document.createElement('div');
      info.innerHTML = "<p>c'est moi la bulle !</p>";
      info.id = "bulle";
@@ -289,16 +289,16 @@ La création et la destruction de cette bulle reposent sur trois méthodes inté
    }
    ```
 
-   Décrivez ce que fait chaque ligne. Vous creuserez en particulier la première et la dernière ligne. Copiez ce code dans votre fichier `scripts_td1.js`. Lancez dans la console la commande `construit_infobulle();` Observez ce qui se passe par l’inspecteur d’objet.
+   Décrivez ce que fait chaque ligne. Vous creuserez en particulier la première et la dernière ligne. Copiez ce code dans votre fichier `scripts_td1.js`. Lancez dans la console la commande `construitInfobulle();` Observez ce qui se passe par l’inspecteur d’objet.
 
-2. Stylisez un peu votre bulle en ajoutant quelques lignes à la fonction `construit_infobulle`. Vous pouvez ajouter du *padding*, un *border-radius* et un *box-shadow*, etc.
+2. Stylisez un peu votre bulle en ajoutant quelques lignes à la fonction `construitInfobulle`. Vous pouvez ajouter du *padding*, un *border-radius* et un *box-shadow*, etc.
 
    Remarque : on aurait bien sûr pu isoler toutes les lignes `info.style....` dans un fichier css et ne garder que les autres lignes pour le JavaScript. Ici l'objectif est de montrer qu'on peut agir sur le css d'un élément en injectant du style `inline` (ce qui est plutôt déconseillé en général).
 
-3. Voici maintenant le code d’une fonction `detruit_bulle` :
+3. Voici maintenant le code d’une fonction `detruitInfobulle` :
 
    ```js
-   function detruit_infobulle() {
+   function detruitInfobulle() {
      let info = document.getElementById('bulle');
      document.body.removeChild(info);
    }
@@ -313,7 +313,7 @@ La création et la destruction de cette bulle reposent sur trois méthodes inté
 
 ## Exercice 7 - Et pour quelques minutes de plus...
 
-1. Renseignez l'attribut `onclick` de la balise `<img id="parametres"...>` pour permettre le lancement, au clic, de l'instruction `changer_parametres()` correspondant à une fonction que vous allez écrire.
+1. Renseignez l'attribut `onclick` de la balise `<img id="parametres"...>` pour permettre le lancement, au clic, de l'instruction `changerParametres()` correspondant à une fonction que vous allez écrire.
 
 2. codez la fonction en question pour qu'elle :
 
