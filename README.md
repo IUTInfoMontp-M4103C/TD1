@@ -134,7 +134,7 @@ Supprimez aussi les dernières lignes PHP en début de fichier.
 
 La nouvelle structure html de la bannière montre qu’il y a 6 images, dont une de classe « visible » et 5 de classe « cachee ».
 
-Derrière ces deux classes il y a une valeur différente de l’opacité de l’image (0 pour cachée et 1 pour visible, voir le css). Ces images sont superposées.
+Derrière ces deux classes il y a une valeur différente de l’opacité de l’image (0 pour cachée et 1 pour visible, voir le css). Ces images sont superposées (à l'aide d'une propriété CSS `position:absolute`).
 
 Vous allez créer deux effets différents de succession d’images.
 
@@ -156,6 +156,8 @@ Vous allez créer deux effets différents de succession d’images.
    ```
 
    Si votre fonction est opérationnelle, l'image de la bannière a dû disparaître...
+
+   *Rappel :* Comme nous avons vu dans le cours 1, le mot-clé `const` déclare une variable comme `let` mais en interdisant d'être réaffecté plus tard. Avantage : cela évite de le réaffecter par erreur.
 
 2. Créez de même une fonction `afficher(im)`, rafraîchissez la page (pour charger le script complété) et testez la nouvelle fonction dans la console.
 
@@ -207,16 +209,15 @@ Vous allez créer deux effets différents de succession d’images.
 
    Ceci permet de créer une variable `chb` de type **timer**. Réactualisez la page. L’instruction précédente lance en boucle la fonction `changeBanniereV1` à intervalles réguliers de 6000 ms.
 
-6. Récupérez l’ensemble de votre script, qui commence à être imposant, sauvegardez-le dans un fichier `script_td1.js` du répertoire `public_html/JS/TD/TD1/js` et incorporez dans le html, à la place du script déplacé, la balise suivante, qui permet d’insérer l’ensemble du script :
+6. Coupez l’ensemble de votre script, qui commence à être imposant, et collez-le dans un fichier `script_td1.js` du répertoire `public_html/JS/TD/TD1/js`. Incorporez la balise suivante dans le html dans la balise `<head>`, ce qui permettra d’insérer l’ensemble du script :
 
    ```html
-   <script type="text/javascript" src="js/script_td1.js"></script>
+   <script defer type="text/javascript" src="js/script_td1.js"></script>
    ```
 
    Enlevez aussi l’instruction PHP qui annonce l’appel au serveur. Vous avez compris qu’il n’y avait qu’un seul appel maintenant, et que tout est dynamisé côté client.
 
-   **Remarque importante :** le chargement du script est bloquant pour le chargement des balises html. Il est donc important que les éléments html soient chargés avant que le script n’agisse. C’est pourquoi ce script est inséré juste avant la balise `</body>`.
-
+   **Remarque importante :** Le mot clé `defer` dans la balise `<script>` est indispensable : il permet de charger le script de manière asynchrone, c'est-à-dire sans bloquer le chargement de la suite du document HTML, et de ne l'exécuter qu'une fois que le document HTML est complètement chargé.
 
 7. On va maintenant programmer une transition plus douce entre les différentes images de la bannière. Pour cela, c’est très simple : il suffit d’ajouter une transition sur l’opacité quand on passe de la classe cachee à la classe visible et aussi de la classe visible à la classe cachee. Cela se fait par des instructions comme :
 
@@ -244,10 +245,7 @@ On peut aussi dynamiser le titre « Galerie de fleurs ». Ainsi, quand on cliq
    };
    ```
 
-   *Rappel :* Comme nous avons vu dans le cours 1, le mot-clé `const` déclare une variable comme `let` mais en interdisant d'être réaffecté plus tard. Avantage : cela évite de le réaffecter par erreur.
-
-
-2. Créez une fonction `adapterTitre(nom)` qui modifie le contenu de la balise `<span>`. Cette fonction utilisera le tableau `tabTitres`. L’appel de cette fonction sera inséré dans la fonction `adapterGalerie`.
+2. Créez une fonction `adapterTitre(nom)` qui modifie le contenu de la balise `<span>`. Cette fsonction utilisera le tableau `tabTitres`. L’appel de cette fonction sera inséré dans la fonction `adapterGalerie`.
 
    **Indications :** on peut modifier le contenu d’une balise comme `<span>` en changeant la valeur de son attribut `innerHTML`, avec une instruction similaire à :
 
@@ -290,6 +288,8 @@ La création et la destruction de cette bulle reposent sur trois méthodes inté
    ```
 
    Décrivez ce que fait chaque ligne. Vous creuserez en particulier la première et la dernière ligne. Copiez ce code dans votre fichier `scripts_td1.js`. Lancez dans la console la commande `construitInfobulle();` Observez ce qui se passe par l’inspecteur d’objet.
+
+   **Note :** Vous aurez remarqué que l'on a adopté la convention de nommage `camelCase` (comme en Java) pour nos fonctions et variables JavaScript. Nous vous invitons à faire de même.
 
 2. Stylisez un peu votre bulle en ajoutant quelques lignes à la fonction `construitInfobulle`. Vous pouvez ajouter du *padding*, un *border-radius* et un *box-shadow*, etc.
 
