@@ -91,6 +91,8 @@ Créez dans votre `public_html` un dossier `JS/TD`. C'est ce dossier qui accueil
        for(let i = 1; i <= 6; i++) {
          const image = document.getElementById('fleur' + i);
          image.src = 'img/fleurs/' + nom + '/' + nom + i + '.jpg';
+		 // ou avec la syntaxe `` qui permet le remplacement de variables
+		 // image.src = `img/fleurs/${nom}/${nom}${i}.jpg`
        }
      }
    </script>
@@ -222,7 +224,7 @@ Vous allez créer deux effets différents de succession d’images.
 7. On va maintenant programmer une transition plus douce entre les différentes images de la bannière. Pour cela, c’est très simple : il suffit d’ajouter une transition sur l’opacité quand on passe de la classe cachee à la classe visible et aussi de la classe visible à la classe cachee. Cela se fait par des instructions comme :
 
    ```js
-   maBanniere.style.transition = "opacity 3s";`
+   maBanniere.style.transition = "opacity 3s";
    ```
 
    Cette instruction JavaScript agit sur le css en écrivant un style « inline » pour la balise, comme vous pouvez le constater par l’inspecteur d’objets.
