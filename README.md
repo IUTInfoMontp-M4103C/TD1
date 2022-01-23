@@ -7,7 +7,7 @@
 
 Cliquez sur le lien ci-dessous pour faire, dans un dossier public_html/JS/TD1, votre fork privé du TD1 (**attention, pas de fork à la main !**):
 
-https://classroom.github.com/a/3S6hMQt6
+https://classroom.github.com/a/BEr7Xy5Q
 
 <!-- La version [PDF](ressources/td1.pdf) du TD. -->
 
