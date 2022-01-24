@@ -247,7 +247,7 @@ On peut aussi dynamiser le titre « Galerie de fleurs ». Ainsi, quand on cliq
    };
    ```
 
-2. Créez une fonction `adapterTitre(nom)` qui modifie le contenu de la balise `<span>`. Cette fsonction utilisera le tableau `tabTitres`. L’appel de cette fonction sera inséré dans la fonction `adapterGalerie`.
+2. Créez une fonction `adapterTitre(nom)` qui modifie le contenu de la balise `<span>`. Cette fonction utilisera le tableau `tabTitres`. L’appel de cette fonction sera inséré dans la fonction `adapterGalerie`.
 
    **Indications :** on peut modifier le contenu d’une balise comme `<span>` en changeant la valeur de son attribut `innerHTML`, avec une instruction similaire à :
 
