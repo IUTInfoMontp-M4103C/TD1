@@ -1,19 +1,23 @@
-# ![](ressources/logo.jpeg) Prog web client riche - JavaScript
+---
+lang: fr
+---
+
+# ![](ressources/logo.jpeg) R.4.01 Développement Web - JavaScript
 
 ### IUT Montpellier-Sète – Département Informatique
 
 ## TD1
 #### _Thème : dynamiser une page web_
 
-Cliquez sur le lien ci-dessous pour faire, dans un dossier public_html/JS/TD1, votre fork privé du TD1 (**attention, pas de fork à la main !**):
-
-https://classroom.github.com/a/BEr7Xy5Q
-
-<!-- La version [PDF](ressources/td1.pdf) du TD. -->
+Commencez par `git clone` le *fork* du TD1 que nous avons fait pour vous. Ce
+*fork* doit se trouver dans
+https://gitlabinfo.iutmontp.univ-montp2.fr/r4.01-developpementweb/etu/votre_login_IUT/TD1
+. Vous sauvegarderez ainsi votre travail sur GitLab, ce qui permettra aux
+enseignants d'avoir un accès facile à votre code.
 
 ## Introduction
 
-Vos TD et projets de S1 (Conception Doc) vous ont appris à créer des sites web statiques, où les pages ne varient pas. Leur seul aspect "dynamique" était apporté par le css qui permettait des effets (_media queries_, transitions, etc).
+Vos TD et projets de S1 (Conception Doc) vous ont appris à créer des sites web statiques, où les pages ne varient pas. Leur seul aspect "dynamique" était apporté par le *CSS* qui permettait des effets (_media queries_, transitions, etc).
 
 En S3 vous avez appris à réellement dynamiser vos sites web en utilisant des appels au serveur web, avec des pages web construites par le serveur, en fonction de données recueillies sur la base de données ou par le biais de formulaires, et au moyen du langage PHP.
 
@@ -21,7 +25,7 @@ L’aspect dynamique de ces sites tient donc au fait que le serveur web construi
 
 JavaScript permet de rendre dynamique une page web par l’utilisation de scripts, en réponse à des sollicitations côté client. Par exemple, des événements comme un clic de souris, une action au clavier, etc. Ici l’aspect dynamique est indépendant d’un appel serveur.
 
-Dans certains cas, il peut être excessif de faire des appels permanents au serveur. En effet, une requête HTTP, génération de page PHP puis réponse HTTP prend du temps et des ressources informatiques, alors il est toujours mieux de s'en passer. Dans ce TD1 vous allez devoir modifier une page web qui pour le moment est en partie remplie via PHP, par des appels exagérés au serveur web.
+Dans certains cas, il peut être excessif de faire des appels permanents au serveur. En effet, une requête *HTTP*, génération de page PHP puis réponse *HTTP* prend du temps et des ressources informatiques, alors il est toujours mieux de s'en passer. Dans ce TD1 vous allez devoir modifier une page web qui pour le moment est en partie remplie via PHP, par des appels exagérés au serveur web.
 
 Créez dans votre `public_html` un dossier `JS/TD`. C'est ce dossier qui accueillera le dépôt local en lien avec votre fork du TD1. Il est nécessaire que ce dépôt local soit dans votre `public_html` car le fichier `index.php` aura besoin d'un serveur web qui produira la page web bien construite.
 
@@ -35,17 +39,17 @@ Créez dans votre `public_html` un dossier `JS/TD`. C'est ce dossier qui accueil
    <img src="ressources/img3.png" width="800">
  </p>
 
-2. En cliquant sur un des 4 items du menu, on fait une requête http au serveur, en lui passant en GET une valeur de fleur. Expliquez ce qui est actualisé sur la page quand on clique sur un item du menu.
+2. En cliquant sur un des 4 items du menu, on fait une requête *HTTP* au serveur, en lui passant en *GET* une valeur de fleur. Expliquez ce qui est actualisé sur la page quand on clique sur un item du menu.
 
 ## Exercice 2 - dynamiser le menu
 
-1. Excluez tous les appels au serveur dans les liens du menu en remplaçant les `href="index.php?fleur=…"` par des `href="#"`. Vérifiez que le menu n’agit plus (ne lance plus de requête http).
+1. Excluez tous les appels au serveur dans les liens du menu en remplaçant les `href="index.php?fleur=…"` par des `href="#"`. Vérifiez que le menu n’agit plus (ne lance plus de requête *HTTP*).
 
 2. Excluez de la partie PHP initiale (lignes 1 à 12) les lignes qui affectent une valeur à la variable `$fleur`.
 
 3. Réactualisez la page web. Expliquez ce que vous constatez.
 
-4. Pour corriger l’erreur, modifiez le contenu de la balise html `<div class='galerie'>` pour que par défaut elle affiche les roses, en remplaçant les évocations au PHP par ce qu’il faut.
+4. Pour corriger l’erreur, modifiez le contenu de la balise *HTML* `<div class='galerie'>` pour que par défaut elle affiche les roses, en remplaçant les évocations au PHP par ce qu’il faut.
 
 5. Modifiez les balises `<a>` du menu pour les transformer ainsi :
 
@@ -62,7 +66,7 @@ Créez dans votre `public_html` un dossier `JS/TD`. C'est ce dossier qui accueil
 
 6. Ouvrez l’examinateur d’élément, menu « console » (F12), rafraîchissez la page, cliquez sur un item du menu et expliquez le message d’erreur qui apparaît.
 
-   L’attribut `onclick` des balises `<a>` a pour valeur une chaîne   de caractères qui évoque l’exécution d’une fonction `adapterGalerie` avec un paramètre propre à chaque balise `<a>`.
+   L’attribut `onclick` des balises `<a>` a pour valeur une chaîne de caractères qui évoque l’exécution d’une fonction `adapterGalerie` avec un paramètre propre à chaque balise `<a>`.
 
    Cet attribut `onclick` permet un appel à un script JavaScript quand le lien est cliqué.
 
@@ -104,7 +108,7 @@ Créez dans votre `public_html` un dossier `JS/TD`. C'est ce dossier qui accueil
 
    + Que fait `image.src = …` ?
 
-   Copiez le nouveau code de `adapterGalerie`, puis vérifiez vos  réponses par l’inspecteur d’éléments après les clics sur les  items du menu.
+   Copiez le nouveau code de `adapterGalerie`, puis vérifiez vos réponses par l’inspecteur d’éléments après les clics sur les items du menu.
 
    Vous prendrez le temps d'inspecter les images et de constater que les attributs `src` ont été adaptés.
 
@@ -134,9 +138,9 @@ On va maintenant dynamiser la bannière. Pour le moment, l'image est choisie au 
 
 Supprimez aussi les dernières lignes PHP en début de fichier.
 
-La nouvelle structure html de la bannière montre qu’il y a 6 images, dont une de classe « visible » et 5 de classe « cachee ».
+La nouvelle structure *HTML* de la bannière montre qu’il y a 6 images, dont une de classe `visible` et 5 de classe `cachee`.
 
-Derrière ces deux classes il y a une valeur différente de l’opacité de l’image (0 pour cachée et 1 pour visible, voir le css). Ces images sont superposées (à l'aide d'une propriété CSS `position:absolute`).
+Derrière ces deux classes il y a une valeur différente de l’opacité de l’image (0 pour cachée et 1 pour visible, voir le *CSS*). Ces images sont superposées (à l'aide d'une propriété *CSS* `position:absolute`).
 
 Vous allez créer deux effets différents de succession d’images.
 
@@ -172,7 +176,7 @@ Vous allez créer deux effets différents de succession d’images.
    afficher(imgBan1);
    ```
 
-3. Créez ensuite une fonction `suivant(n)` qui retourne l’entier suivant n (au sens 1=>2, 2=>3, 3=>4, 4=>5, 5=>6 et 6=>1). En effet, il y a 6 images de bannières et on va passer d’une bannière à la suivante de façon naturelle sauf si on est à la sixième auquel cas on revient à la première.
+3. Créez ensuite une fonction `suivant(n)` qui retourne l’entier suivant n (au sens `1=>2`, `2=>3`, `3=>4`, `4=>5`, `5=>6` et `6=>1`). En effet, il y a 6 images de bannières et on va passer d’une bannière à la suivante de façon naturelle sauf si on est à la sixième auquel cas on revient à la première.
 
 4. On va maintenant créer une fonction `changeBanniereV1()` qui :
     - récupère la bannière visible ;
@@ -181,7 +185,7 @@ Vous allez créer deux effets différents de succession d’images.
     - cache la bannière actuellement visible ;
     - affiche la bannière suivante.
 
-   Pour récupérer la bannière visible (qui n’est pas forcément la bannière n°1, même si au chargement de la page, c’est le cas), on va se servir non pas de l’identifiant, mais du fait que la bannière visible est LA SEULE bannière qui a la classe visible. Or JavaScript permet de récupérer, sous forme de tableau, les éléments html de la page qui sont munis d’une certaine classe.
+   Pour récupérer la bannière visible (qui n’est pas forcément la bannière n°1, même si au chargement de la page, c’est le cas), on va se servir non pas de l’identifiant, mais du fait que la bannière visible est LA SEULE bannière qui a la classe visible. Or JavaScript permet de récupérer, sous forme de tableau, les éléments *HTML* de la page qui sont munis d’une certaine classe.
 
    Cela se fait par la méthode `document.getElementsByClassName` qui gère un argument chaîne de caractères.
 
@@ -199,7 +203,7 @@ Vous allez créer deux effets différents de succession d’images.
    Une fois que c’est fait, testez dans la console votre fonction en lançant l’instruction `changeBanniereV1();` (sans oublier les parenthèses).
 
    **Attention :** JavaScript peut avoir un comportement surprenant.
-   Par exemple, l’opération `"3" + 1` donne `"31"`.  Ne soyez donc pas étonné si `suivant("3")` retourne `"31"`.
+   Par exemple, l’opération `"3" + 1` donne `"31"`. Ne soyez donc pas étonné si `suivant("3")` retourne `"31"`.
    Par contre, `3 + 1` donne bien `4`. Il peut donc être utile de transformer une chaîne de caractères (l’identifiant de la bannière) en nombre. Pour cela, vous pouvez convertir une chaîne de caractères en nombre à l'aide de la fonction `Number(x)` (par exemple `Number("3") + 1` donne bien `4`).
 
 
@@ -211,7 +215,7 @@ Vous allez créer deux effets différents de succession d’images.
 
    Ceci permet de créer une variable `chb` de type **timer**. Réactualisez la page. L’instruction précédente lance en boucle la fonction `changeBanniereV1` à intervalles réguliers de 6000 ms.
 
-6. Coupez l’ensemble de votre script, qui commence à être imposant, et collez-le dans un fichier `script_td1.js` du répertoire `public_html/JS/TD/TD1/js`. Incorporez la balise suivante dans le html dans la balise `<head>`, ce qui permettra d’insérer l’ensemble du script :
+6. Coupez l’ensemble de votre script, qui commence à être imposant, et collez-le dans un fichier `script_td1.js` du répertoire `public_html/JS/TD/TD1/js`. Incorporez la balise suivante dans le *HTML* dans la balise `<head>`, ce qui permettra d’insérer l’ensemble du script :
 
    ```html
    <script defer type="text/javascript" src="js/script_td1.js"></script>
@@ -219,15 +223,15 @@ Vous allez créer deux effets différents de succession d’images.
 
    Enlevez aussi l’instruction PHP qui annonce l’appel au serveur. Vous avez compris qu’il n’y avait qu’un seul appel maintenant, et que tout est dynamisé côté client.
 
-   **Remarque importante :** Le mot clé `defer` dans la balise `<script>` est indispensable : il permet de charger le script de manière asynchrone, c'est-à-dire sans bloquer le chargement de la suite du document HTML, et de ne l'exécuter qu'une fois que le document HTML est complètement chargé.
+   **Remarque importante :** Le mot clé `defer` dans la balise `<script>` est indispensable : il permet de charger le script de manière asynchrone, c'est-à-dire sans bloquer le chargement de la suite du document *HTML*, et de ne l'exécuter qu'une fois que le document *HTML* est complètement chargé.
 
-7. On va maintenant programmer une transition plus douce entre les différentes images de la bannière. Pour cela, c’est très simple : il suffit d’ajouter une transition sur l’opacité quand on passe de la classe cachee à la classe visible et aussi de la classe visible à la classe cachee. Cela se fait par des instructions comme :
+7. On va maintenant programmer une transition plus douce entre les différentes images de la bannière. Pour cela, c’est très simple : il suffit d’ajouter une transition sur l’opacité quand on passe de la classe `cachee` à la classe `visible` et aussi de la classe `visible` à la classe `cachee`. Cela se fait par des instructions comme :
 
    ```js
    maBanniere.style.transition = "opacity 3s";
    ```
 
-   Cette instruction JavaScript agit sur le css en écrivant un style « inline » pour la balise, comme vous pouvez le constater par l’inspecteur d’objets.
+   Cette instruction JavaScript agit sur le *CSS* en écrivant un style « inline » pour la balise, comme vous pouvez le constater par l’inspecteur d’objets.
 
    Créez une fonction `changeBanniereV2` (sur la même base que `changeBanniereV1`) qui réalisera cette nouvelle transition, et que vous utiliserez à la place de `changeBanniereV1` dans le `setInterval`.
 
@@ -255,7 +259,7 @@ On peut aussi dynamiser le titre « Galerie de fleurs ». Ainsi, quand on cliq
    monParagraphe.innerHTML = 'Hello world !';
    ```
 
-   **Remarque :** il serait plus cohérent que, par défaut, le titre de la galerie soit "Galerie de roses". Vous pouvez le changer dans le html.
+   **Remarque :** il serait plus cohérent que, par défaut, le titre de la galerie soit "Galerie de roses". Vous pouvez le changer dans le *HTML*.
 
 ## Exercice 5 - compléments pour la bannière
 
@@ -270,7 +274,7 @@ On peut aussi dynamiser le titre « Galerie de fleurs ». Ainsi, quand on cliq
 
 Vous devez maintenant créer une info-bulle toute simple qui apparaît au survol du **footer** et disparaît après ce survol.
 
-La création et la destruction de cette bulle reposent sur trois méthodes intéressantes de l’objet `document`. Nous reviendrons sur ces méthodes plus tard dans le cours, mais vous pouvez en avoir un  premier aperçu :
+La création et la destruction de cette bulle reposent sur trois méthodes intéressantes de l’objet `document`. Nous reviendrons sur ces méthodes plus tard dans le cours, mais vous pouvez en avoir un premier aperçu :
 
 
 1. Voici le code de la fonction `construitInfobulle()` :
@@ -295,7 +299,7 @@ La création et la destruction de cette bulle reposent sur trois méthodes inté
 
 2. Stylisez un peu votre bulle en ajoutant quelques lignes à la fonction `construitInfobulle`. Vous pouvez ajouter du *padding*, un *border-radius* et un *box-shadow*, etc.
 
-   Remarque : on aurait bien sûr pu isoler toutes les lignes `info.style....` dans un fichier css et ne garder que les autres lignes pour le JavaScript. Ici l'objectif est de montrer qu'on peut agir sur le css d'un élément en injectant du style `inline` (ce qui est plutôt déconseillé en général).
+   Remarque : on aurait bien sûr pu isoler toutes les lignes `info.style....` dans un fichier *CSS* et ne garder que les autres lignes pour le JavaScript. Ici l'objectif est de montrer qu'on peut agir sur le *CSS* d'un élément en injectant du style `inline` (ce qui est plutôt déconseillé en général).
 
 3. Voici maintenant le code d’une fonction `detruitInfobulle` :
 
@@ -320,7 +324,7 @@ La création et la destruction de cette bulle reposent sur trois méthodes inté
 2. codez la fonction en question pour qu'elle :
 
    + génère un nombre entier aléatoire entre 1 et 4;
-   + modifie l'image de fond du `body` en lui donnant comme nouvelle url celle correspondant au fichier image dont le nom correspond au nombre aléatoire ci-dessus (il y a dans le dossier `img/background` 4 fichiers `bg-1.jpg`, ..., `bg-4.jpg`)
+   + modifie l'image de fond du `body` en lui donnant comme nouvelle *URL* celle correspondant au fichier image dont le nom correspond au nombre aléatoire ci-dessus (il y a dans le dossier `img/background` 4 fichiers `bg-1.jpg`, ..., `bg-4.jpg`)
 
 3. comme le nombre généré peut être répété, on peut parfois avoir l'impression que la fonction est inopérante, alors qu'elle a juste remplacé une image par elle-même. Débrouillez-vous pour éviter ce petit inconvénient.
 
